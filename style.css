@@ -1,20 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,700&display=swap');
+
 body {
+  font-family: 'Cabin', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 #nav-bar {
-  height: 10vh;
+  position: sticky;
+  top: 0;
+  height: 75px;
   background-color: #111111;
-  border-bottom: 2px solid rgb(61, 61, 61);
-  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-.banner {
-  background-color: black;
+.nav-tabs {
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-.game-background {
-  width: 100%;
-  height: 75vh;
+.nav-tabs:hover {
+  background-color: rgb(63, 63, 63);
+}
+
+/* left nav */
+
+#left-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+#left-nav-bar > * {
+  margin: 0 13px;
+}
+
+#right-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#pfp {
+  width: 50px;
+  border-radius: 25px;
+}
+
+#name {
+  font-size: 25px;
+  margin-top: -10px;
+  color: white;
+  text-decoration: none;
+}
+
+#name:link {
+  text-decoration: none;
+}
+
+#name:visited {
+  text-decoration: none;
+}
+
+#name:hover {
+  text-decoration: none;
+}
+
+#name:active {
+  text-decoration: none;
+}
+
+/* right nav */
+
+#right-nav-bar > * {
+  margin: 0 5px;
+}
+
+#phone-number {
+  font-size: 14px;
+}
+
+.copy-link {
+  display: flex;
+}
+
+.copy-link-input {
+  font-size: 14px;
+  width: 165px;
+  font-family: 'Cabin', sans-serif;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: right;
+}
+
+.copy-link-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.copy-link-button:hover {
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+
+#linkedin {
+  width: 40px;
+}
+
+#linkedin:hover {
+  filter: invert(26%) sepia(82%) saturate(2122%) hue-rotate(181deg)
+    brightness(91%) contrast(101%);
 }

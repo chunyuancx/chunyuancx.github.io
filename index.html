@@ -6,27 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brandson Ang Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
     <div id="nav-bar">
-      <div>Brandson Ang</div>
-      <div>Projects</div>
-      <ul>
-        <li>game 1</li>
-        <li>game 2</li>
-        <li>game 3</li>
-        <li>game 4</li>
-        <li>game 5</li>
-      </ul>
-      <div>About</div>
-      <div>Contact</div>
+      <div id="left-nav-bar">
+        <a href="/index.html"
+          ><img id="pfp" src="Images/pfp.png" alt="pfp.png"
+        /></a>
+        <a href="/index.html" id="name">Brandson Ang</a>
+        <div class="nav-tabs">GAMES</div>
+        <div class="nav-tabs">STORY TELLING</div>
+        <div class="nav-tabs">ARTWORKS</div>
+        <div class="nav-tabs">ABOUT ME</div>
+      </div>
+      <div id="right-nav-bar">
+        <div id="phone-number">+65 9322 9026</div>
+        <div class="copy-link">
+          <input
+            type="text"
+            class="copy-link-input"
+            value="bransonangdev@gmail.com"
+            readonly
+          />
+          <button type="button" class="copy-link-button">
+            <img
+              style="width: 25px"
+              src="Icons/icon-copy-32.png"
+              alt="copy-icon"
+            />
+          </button>
+        </div>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/branson-ang-91852b159/"
+          ><img
+            id="linkedin"
+            src="Icons/icon-linkedin-50.png"
+            alt="linkedin-icon"
+        /></a>
+      </div>
     </div>
-    <div class="banner">
-      <img
-        class="game-background"
-        src="Images/TimelessTaleBackground.png"
-        alt=""
-      />
+    <!-- Introduction -->
+    <div id="introduction">
+      <div class="left-container">
+        <img
+          style="pointer-events: none"
+          src="Images/pfp-cropped.png"
+          alt="pfp-cropped.png"
+        />
+      </div>
+      <div class="right-container" id="introduction-right-container">
+        <div class="neonText" id="introduction-title">GAME DESIGNER</div>
+        <div class="neonText">Versatile. Creative. Self Directed.</div>
+        <button id="introduction-button">About Me</button>
+      </div>
     </div>
+    <!-- Timeless Tales -->
+    <div class="game-background"></div>
+
+    <!-- Back to top button -->
+    <a id="back-to-top-button"></a>
   </body>
 </html>
+<!-- scripts -->
+<script src="copyText.js"></script>
+<script src="backToTop.js"></script>

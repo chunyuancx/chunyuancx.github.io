@@ -1,0 +1,151 @@
+.left-container {
+  display: flex;
+}
+
+.right-container {
+  display: flex;
+}
+
+#introduction {
+  height: 60vh;
+  background-color: #000000;
+  border-bottom: 10px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url('Images/darkbrickwall.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+#introduction-right-container {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  color: #eeeeee;
+}
+
+.neonText {
+  color: #eeeeee;
+  text-shadow: 0 0 10px #0fa, 0 0 20px #0fa, 0 0 10px #0fa, 0 0 20px #0fa,
+    0 0 40px #0fa;
+  margin-bottom: 10px;
+}
+
+#introduction-title {
+  animation: flicker 1.5s infinite alternate;
+  font-size: 4rem;
+  letter-spacing: 5px;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #0fa,
+      0 0 20px #0fa, 0 0 10px #0fa, 0 0 20px #0fa, 0 0 40px #0fa;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+#introduction-button {
+  background: none;
+  border: 2px solid #0fa;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  margin-top: 10px;
+  color: #0fa;
+  font-weight: 700;
+  position: relative;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow: hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+#introduction-button:hover {
+  color: black;
+}
+
+#introduction-button:before {
+  content: '';
+  position: absolute;
+  background: #0fa;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+#introduction-button:hover:before {
+  top: 0;
+}
+
+.game-background {
+  background-image: url('Images/TimelessTaleBackground.png');
+  background-size: cover;
+  background-position: center center;
+  height: 60vh;
+  border-bottom: 10px solid black;
+}
+
+/* back to top button */
+#back-to-top-button {
+  display: inline-block;
+  background-color: #2b2b2b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+#back-to-top-button::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#back-to-top-button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+#back-to-top-button:active {
+  background-color: lightblue;
+}
+
+#back-to-top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
