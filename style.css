@@ -22,9 +22,24 @@ body {
 .nav-tabs {
   padding: 5px 10px;
   border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-tabs:link {
+  text-decoration: none;
+}
+
+.nav-tabs:visited {
+  text-decoration: none;
+}
+
+.nav-tabs:active {
+  text-decoration: none;
 }
 
 .nav-tabs:hover {
+  text-decoration: none;
   background-color: rgb(63, 63, 63);
 }
 
@@ -47,32 +62,14 @@ body {
   align-items: center;
 }
 
-#pfp {
-  width: 50px;
-  border-radius: 25px;
-}
-
 #name {
-  font-size: 25px;
-  margin-top: -10px;
-  color: white;
-  text-decoration: none;
+  font-size: 35px;
+  display: flex;
+  margin-bottom: 0;
 }
 
-#name:link {
-  text-decoration: none;
-}
-
-#name:visited {
-  text-decoration: none;
-}
-
-#name:hover {
-  text-decoration: none;
-}
-
-#name:active {
-  text-decoration: none;
+#sg-flag {
+  filter: brightness(93%);
 }
 
 /* right nav */
