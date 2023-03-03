@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=NTR&display=swap');
+
 .left-container {
   display: flex;
 }
@@ -27,15 +29,32 @@
 
 .neonText {
   color: #eeeeee;
-  text-shadow: 0 0 10px #0fa, 0 0 20px #0fa, 0 0 10px #0fa, 0 0 20px #0fa,
-    0 0 40px #0fa;
-  margin-bottom: 18px;
+  text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 5px #0fa, 0 0 10px #0fa,
+    0 0 10px #0fa;
 }
 
 #introduction-title {
   animation: flicker 1.5s infinite alternate;
-  font-size: 4rem;
-  letter-spacing: 5px;
+  font-size: 3rem;
+  letter-spacing: 4px;
+}
+
+#introduction-name {
+  font-size: 40px;
+  display: flex;
+  line-height: 25px;
+}
+
+#introduction-ethos {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#introduction-para {
+  font-size: 18px;
+  width: 600px;
+  line-height: 20px;
+  margin-bottom: 30px;
 }
 
 /* Flickering animation */
@@ -47,8 +66,8 @@
   53%,
   57%,
   100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #0fa,
-      0 0 20px #0fa, 0 0 10px #0fa, 0 0 20px #0fa, 0 0 40px #0fa;
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #fff, 0 0 10px #0fa,
+      0 0 1px #0fa, 0 0 5px #0fa, 0 0 10px #0fa, 0 0 20px #0fa;
   }
 
   20%,
@@ -63,8 +82,7 @@
   border: 2px solid #0fa;
   border-radius: 5px;
   height: 40px;
-  width: 250px;
-  margin-top: 10px;
+  width: 150px;
   color: #0fa;
   font-weight: 700;
   position: relative;
@@ -95,7 +113,7 @@
   right: 0;
   top: 100%;
   z-index: -1;
-  -webkit-transition: top 0.09s ease-in;
+  transition: top 0.09s ease-in;
 }
 
 #introduction-button:hover:before {
@@ -138,11 +156,11 @@
 
 #back-to-top-button:hover {
   cursor: pointer;
-  background-color: lightblue;
+  background-color: #0fa;
 }
 
 #back-to-top-button:active {
-  background-color: lightblue;
+  background-color: #0fa;
 }
 
 #back-to-top-button.show {
