@@ -20,6 +20,10 @@
   background-size: cover;
 }
 
+#introduction-left-container {
+  justify-content: flex-end;
+}
+
 #introduction-right-container {
   flex-direction: column;
   justify-content: center;
