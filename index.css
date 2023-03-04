@@ -2,6 +2,7 @@
 
 .left-container {
   display: flex;
+  justify-content: center;
 }
 
 .right-container {
@@ -18,8 +19,33 @@
   background-size: cover;
 }
 
+@media (max-width: 940px) {
+  #introduction {
+    height: 100vh;
+    flex-direction: column;
+  }
+}
+
 #introduction-left-container {
   justify-content: flex-end;
+}
+
+@media (max-width: 940px) {
+  #introduction-left-container {
+    display: none;
+  }
+}
+
+#introduction-left-container-mobile-view > img {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  #introduction-left-container-mobile-view > img {
+    display: flex;
+    border-radius: 100%;
+    width: 250px;
+  }
 }
 
 #introduction-right-container {
@@ -27,6 +53,14 @@
   justify-content: center;
   padding-left: 100px;
   color: #eeeeee;
+}
+
+@media (max-width: 940px) {
+  #introduction-right-container {
+    text-align: center;
+    align-items: center;
+    padding-left: 0;
+  }
 }
 
 .neonText {
@@ -43,7 +77,6 @@
 
 #introduction-name {
   font-size: 40px;
-  display: flex;
   line-height: 25px;
 }
 
@@ -57,6 +90,12 @@
   width: 600px;
   line-height: 20px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 940px) {
+  #introduction-para {
+    width: 400px;
+  }
 }
 
 /* Flickering animation */
@@ -80,6 +119,7 @@
 }
 
 #introduction-button {
+  width: 100%;
   background: #0fa;
   border: 2px solid #0fa;
   height: 40px;
@@ -90,10 +130,15 @@
   border-radius: 4px;
   text-transform: uppercase;
   outline: 0;
-  overflow: hidden;
   z-index: 1;
   cursor: pointer;
   transition: 0.08s ease-in;
+}
+
+@media (max-width: 940px) {
+  #introduction-button {
+    width: 400px;
+  }
 }
 
 #introduction-button:hover {
@@ -141,6 +186,19 @@
   grid-row: auto auto;
   grid-gap: 15px;
 }
+
+@media (max-width: 1880px) {
+  .grid-container {
+    grid-template-columns: 450px 450px;
+  }
+}
+
+@media (max-width: 940px) {
+  .grid-container {
+    grid-template-columns: 450px;
+  }
+}
+
 .grid-item {
   text-align: center;
   animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;

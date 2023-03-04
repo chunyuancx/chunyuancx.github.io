@@ -2,7 +2,7 @@
 
 html {
   scroll-padding-top: 75px;
-} 
+}
 
 body {
   font-family: 'Encode Sans', sans-serif;
@@ -23,6 +23,18 @@ body {
   align-items: center;
   padding: 0 20px;
   z-index: 9999;
+}
+
+@media (max-width: 1135px) {
+  #nav-bar {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 990px) {
+  #nav-bar {
+    display: none;
+  }
 }
 
 .nav-tabs {
@@ -51,6 +63,12 @@ body {
   background-color: rgb(63, 63, 63);
 }
 
+@media (max-width: 1135px) {
+  .nav-tabs {
+    padding: 5px 8px;
+  }
+}
+
 /* left nav */
 
 #left-nav-bar {
@@ -62,6 +80,12 @@ body {
 
 #left-nav-bar > * {
   margin: 0 10px;
+}
+
+@media (max-width: 1135px) {
+  #left-nav-bar > * {
+    margin: 0;
+  }
 }
 
 #right-nav-bar {
