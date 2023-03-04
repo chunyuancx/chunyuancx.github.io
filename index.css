@@ -142,22 +142,7 @@
   outline: 0;
   z-index: 1;
   cursor: pointer;
-  transition: width 0.08s ease-in;
-  background: linear-gradient(-45deg, #0fa, #10ffb7, #69e9e3, #3cf0ba);
-  background-size: 600%;
-  animation: anime 5s linear infinite;
-}
-
-@keyframes anime {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background: #0fa;
 }
 
 @media (max-width: 940px) {
