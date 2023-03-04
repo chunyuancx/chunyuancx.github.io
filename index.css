@@ -65,8 +65,8 @@
 
 .neonText {
   color: #eeeeee;
-  text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 5px #0fa, 0 0 10px #0fa,
-    0 0 10px #0fa;
+  text-shadow: 0 0 1px #0fa, 0 0 3px #0fa, 0 0 3px #0fa, 0 0 3px #0fa,
+    0 0 3px #0fa;
 }
 
 #introduction-title {
@@ -107,8 +107,7 @@
   53%,
   57%,
   100% {
-    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #fff, 0 0 10px #0fa,
-      0 0 1px #0fa, 0 0 5px #0fa, 0 0 10px #0fa, 0 0 20px #0fa;
+    text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 10px #0fa;
   }
 
   20%,
@@ -159,14 +158,6 @@
 
 #introduction-button:hover:before {
   top: 0;
-}
-
-.game-background {
-  background-image: url('Images/TimelessTaleBackground.png');
-  background-size: cover;
-  background-position: center center;
-  height: 60vh;
-  border-bottom: 10px solid black;
 }
 
 /* games */
@@ -237,4 +228,25 @@
       0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
     transform: translateX(0) translateY(0);
   }
+}
+
+.game-background {
+  background-size: cover;
+  background-position: center center;
+  height: 60vh;
+  border-bottom: 10px solid black;
+}
+
+#lunarnauts {
+  background-image: url('Images/Wallpaper/Lunarnauts_Wallpaper.png');
+}
+#afterlife {
+  background-image: url('Images/Wallpaper/Afterlife_Wallpaper.png');
+}
+#timeless-tales {
+  background-image: url('Images/Wallpaper/TimelessTale_Wallpaper.png');
+}
+#grow-inc {
+  background-image: url('Images/Wallpaper/Growinc_Wallpaper.png');
+  background-size: unset;
 }
