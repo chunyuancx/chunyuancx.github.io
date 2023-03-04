@@ -10,12 +10,10 @@
 
 #introduction {
   height: 60vh;
-  background-color: #000000;
-  border-bottom: 10px solid black;
+  background-color: #0c0c0c;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-image: url('Images/darkbrickwall.jpg');
   background-position: center center;
   background-size: cover;
 }
@@ -82,36 +80,30 @@
 }
 
 #introduction-button {
-  background: none;
+  background: #0fa;
   border: 2px solid #0fa;
-  border-radius: 5px;
   height: 40px;
   margin: 0 5px;
-  color: #0fa;
+  color: black;
   font-weight: 700;
   position: relative;
   border-radius: 4px;
   text-transform: uppercase;
   outline: 0;
   overflow: hidden;
-  background: none;
   z-index: 1;
   cursor: pointer;
   transition: 0.08s ease-in;
-  -o-transition: 0.08s ease-in;
-  -ms-transition: 0.08s ease-in;
-  -moz-transition: 0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
 }
 
 #introduction-button:hover {
-  color: black;
+  color: #0fa;
 }
 
 #introduction-button:before {
   content: '';
   position: absolute;
-  background: #0fa;
+  background: black;
   bottom: 0;
   left: 0;
   right: 0;
@@ -132,42 +124,59 @@
   border-bottom: 10px solid black;
 }
 
-/* back to top button */
-#back-to-top-button {
-  display: inline-block;
-  background-color: #2b2b2b;
-  width: 50px;
-  height: 50px;
+/* games */
+#games {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
+  padding: 100px;
+  padding-bottom: 125px;
 }
 
-#back-to-top-button::after {
-  content: '\f077';
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
+.grid-container {
+  display: grid;
+  grid-template-columns: 450px 450px 450px 450px;
+  grid-row: auto auto;
+  grid-gap: 15px;
+}
+.grid-item {
+  text-align: center;
+  animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
-#back-to-top-button:hover {
-  cursor: pointer;
-  background-color: #0fa;
+.grid-item > img {
+  width: 100%;
+  height: 100%;
 }
 
-#back-to-top-button:active {
-  background-color: #0fa;
+.grid-item:hover {
+  animation: shadow-pop-br-in 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
-#back-to-top-button.show {
-  opacity: 1;
-  visibility: visible;
+@keyframes shadow-pop-br-out {
+  0% {
+    box-shadow: 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000, 0 0 #000000,
+      0 0 #000000, 0 0 #000000, 0 0 #000000;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px 1px #0fa, 2px 2px #0fa, 3px 3px #0fa, 4px 4px #0fa,
+      5px 5px #0fa, 6px 6px #0fa, 7px 7px #0fa, 8px 8px #0fa;
+    transform: translateX(-8px) translateY(-8px);
+  }
+}
+
+@keyframes shadow-pop-br-in {
+  from {
+    box-shadow: 1px 1px #0fa, 2px 2px #0fa, 3px 3px #0fa, 4px 4px #0fa,
+      5px 5px #0fa, 6px 6px #0fa, 7px 7px #0fa, 8px 8px #0fa;
+    transform: translateX(-8px) translateY(-8px);
+  }
+  to {
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
+      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    transform: translateX(0) translateY(0);
+  }
 }

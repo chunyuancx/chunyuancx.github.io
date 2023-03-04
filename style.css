@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=NTR&display=swap');
 
+html {
+  scroll-padding-top: 75px;
+} 
+
 body {
   font-family: 'Encode Sans', sans-serif;
   font-family: 'NTR', sans-serif;
@@ -11,13 +15,14 @@ body {
   position: sticky;
   top: 0;
   height: 75px;
-  background-color: #111111;
+  background-color: #0c0c0c;
   display: flex;
   flex-direction: row;
   color: white;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  z-index: 9999;
 }
 
 .nav-tabs {
@@ -145,4 +150,44 @@ body {
     -webkit-transform: translate(0);
     transform: translate(0);
   }
+}
+
+/* back to top button */
+#back-to-top-button {
+  display: inline-block;
+  background-color: #2b2b2b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+#back-to-top-button::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#back-to-top-button:hover {
+  cursor: pointer;
+  background-color: #0fa;
+}
+
+#back-to-top-button:active {
+  background-color: #0fa;
+}
+
+#back-to-top-button.show {
+  opacity: 1;
+  visibility: visible;
 }
