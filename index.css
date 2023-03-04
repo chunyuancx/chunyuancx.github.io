@@ -7,14 +7,18 @@
 
 .right-container {
   display: flex;
+  justify-content: center;
 }
 
 #introduction {
   height: 60vh;
+  padding-top: 75px;
   background-color: #0c0c0c;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background: url(Images/Wallpaper/fightbanner.png);
   background-position: center center;
   background-size: cover;
 }
@@ -28,6 +32,7 @@
 
 #introduction-left-container {
   justify-content: flex-end;
+  height: 100%;
 }
 
 @media (max-width: 940px) {
@@ -51,15 +56,23 @@
 #introduction-right-container {
   flex-direction: column;
   justify-content: center;
-  padding-left: 100px;
+  margin-left: 80px;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 10px;
+  height: 70%;
   color: #eeeeee;
+  background-color: #111111b6;
+  backdrop-filter: blur(1px);
 }
 
 @media (max-width: 940px) {
   #introduction-right-container {
     text-align: center;
     align-items: center;
-    padding-left: 0;
+    height: unset;
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 
@@ -119,10 +132,8 @@
 
 #introduction-button {
   width: 100%;
-  background: #0fa;
   border: 2px solid #0fa;
   height: 40px;
-  margin: 0 5px;
   color: black;
   font-weight: 700;
   position: relative;
@@ -131,7 +142,22 @@
   outline: 0;
   z-index: 1;
   cursor: pointer;
-  transition: 0.08s ease-in;
+  transition: width 0.08s ease-in;
+  background: linear-gradient(-45deg, #0fa, #10ffb7, #69e9e3, #3cf0ba);
+  background-size: 600%;
+  animation: anime 5s linear infinite;
+}
+
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 940px) {
@@ -168,10 +194,10 @@
   align-items: center;
   text-align: center;
   padding: 100px;
-  padding-bottom: 125px;
+  padding-bottom: 200px;
 }
 
-.grid-container {
+#games-grid-container {
   display: grid;
   grid-template-columns: 450px 450px 450px 450px;
   grid-row: auto auto;
@@ -179,28 +205,28 @@
 }
 
 @media (max-width: 1880px) {
-  .grid-container {
+  #games-grid-container {
     grid-template-columns: 450px 450px;
   }
 }
 
 @media (max-width: 940px) {
-  .grid-container {
+  #games-grid-container {
     grid-template-columns: 450px;
   }
 }
 
-.grid-item {
+.games-grid-item {
   text-align: center;
   animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
-.grid-item > img {
+.games-grid-item > a > img {
   width: 100%;
   height: 100%;
 }
 
-.grid-item:hover {
+.games-grid-item:hover {
   animation: shadow-pop-br-in 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
@@ -234,7 +260,6 @@
   background-size: cover;
   background-position: center center;
   height: 60vh;
-  border-bottom: 10px solid black;
 }
 
 #lunarnauts {
@@ -249,4 +274,27 @@
 #grow-inc {
   background-image: url('Images/Wallpaper/Growinc_Wallpaper.png');
   background-size: unset;
+}
+
+/* Artworks */
+
+#artworks {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+  padding-bottom: 125px;
+  border-bottom: 10px solid black;
+}
+
+#artworks-grid-container {
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+  grid-row: auto auto;
+  grid-gap: 15px;
+}
+
+.artworks-grid-item {
 }

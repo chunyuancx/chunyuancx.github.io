@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=NTR&display=swap');
 
 html {
-  scroll-padding-top: 75px;
+  scroll-padding-top: 200px;
+  scroll-padding: 50px;
 }
 
 body {
   font-family: 'Encode Sans', sans-serif;
   font-family: 'NTR', sans-serif;
   margin: 0;
-  padding: 0;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #nav-bar {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 75px;
-  background-color: #0c0c0c;
+  width: 98%;
   display: flex;
   flex-direction: row;
   color: white;
@@ -23,6 +27,7 @@ body {
   align-items: center;
   padding: 0 20px;
   z-index: 9999;
+  transition: 1s;
 }
 
 @media (max-width: 1135px) {
