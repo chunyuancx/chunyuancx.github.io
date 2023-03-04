@@ -70,7 +70,7 @@
 }
 
 #introduction-title {
-  animation: flicker 1.5s infinite alternate;
+  animation: flicker 4s infinite alternate;
   font-size: 3rem;
   letter-spacing: 4px;
 }
