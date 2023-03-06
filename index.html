@@ -13,6 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   </head>
   <body>
     <div id="nav-bar">
@@ -52,10 +53,18 @@
     </div>
     <!-- Introduction -->
     <div id="introduction">
+      <div id="introduction-banner"></div>
       <div class="left-container" id="introduction-left-container">
         <img
-          style="pointer-events: none"
-          src="Images/pfp-cropped-stacked.png"
+          class="pfp-cropped"
+          id="pfp-cropped-shadow"
+          src="Images/pfp-cropped-shadow.png"
+          alt="pfp-cropped.png"
+        />
+        <img
+          class="pfp-cropped"
+          id="pfp-cropped-image"
+          src="Images/pfp-cropped.png"
           alt="pfp-cropped.png"
         />
       </div>
@@ -146,4 +155,10 @@
 <!-- scripts -->
 <script src="navbarSolidScroll.js"></script>
 <script src="copyText.js"></script>
+<script>
+  if (screen.width >= 940) {
+    document.head.appendChild(document.createElement('script')).src =
+      'parallaxImage.js';
+  }
+</script>
 <script src="backToTop.js"></script>

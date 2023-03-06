@@ -3,6 +3,7 @@
 html {
   scroll-padding-top: 200px;
   scroll-padding: 50px;
+  overflow-x: hidden;
 }
 
 body {

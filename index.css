@@ -13,26 +13,27 @@
 #introduction {
   height: 60vh;
   padding-top: 75px;
-  background-color: #0c0c0c;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: url(Images/Wallpaper/fightbanner.png);
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+  z-index: -1;
 }
 
 @media (max-width: 940px) {
   #introduction {
     height: 100vh;
     flex-direction: column;
+    background: url('Images/Wallpaper/Afterlife_Wallpaper.png');
+    background-position: center center;
   }
 }
 
 #introduction-left-container {
   justify-content: flex-end;
   height: 100%;
+  position: relative;
 }
 
 @media (max-width: 940px) {
@@ -43,6 +44,7 @@
 
 #introduction-left-container-mobile-view > img {
   display: none;
+  z-index: 1;
 }
 
 @media (max-width: 940px) {
@@ -51,6 +53,38 @@
     border-radius: 100%;
     width: 250px;
   }
+}
+
+#introduction-banner {
+  position: absolute;
+  background: url('Images/Wallpaper/fightbanner.png');
+  height: 80vh;
+  width: 101%;
+}
+
+@media (max-width: 940px) {
+  #introduction-banner {
+    display: none;
+  }
+}
+
+.pfp-cropped {
+  height: 100%;
+  pointer-events: none;
+}
+
+#pfp-cropped-shadow {
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  z-index: 5;
+}
+
+#pfp-cropped-image {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  z-index: 6;
 }
 
 #introduction-right-container {
@@ -73,6 +107,7 @@
     height: unset;
     margin-left: 0;
     margin-top: 20px;
+    backdrop-filter: blur(3px);
   }
 }
 
