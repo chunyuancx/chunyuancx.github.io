@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 @media (max-width: 940px) {
@@ -171,11 +171,11 @@
   height: 40px;
   color: black;
   font-weight: 700;
-  position: relative;
   border-radius: 4px;
   text-transform: uppercase;
   outline: 0;
-  z-index: 1;
+  position: relative;
+  z-index: 8;
   cursor: pointer;
   background: #0fa;
 }
@@ -198,7 +198,7 @@
   left: 0;
   right: 0;
   top: 100%;
-  z-index: -1;
+  z-index: -5;
   transition: top 0.09s ease-in;
 }
 
@@ -215,6 +215,8 @@
   text-align: center;
   padding: 100px;
   padding-bottom: 200px;
+  position: relative;
+  z-index: 2;
 }
 
 #games-grid-container {
