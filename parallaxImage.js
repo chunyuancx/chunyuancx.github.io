@@ -10,9 +10,9 @@ $('body').mousemove(function (e) {
 // Ticker event will be called on every frame
 TweenLite.ticker.addEventListener('tick', function () {
   if (mouse.moved) {
-    parallaxIt('#pfp-cropped-image', -13); //strenght of movement
-    parallaxIt('#pfp-cropped-shadow', -20); //strenght of movement
-    parallaxIt('#introduction-banner', -10); //strenght of movement
+    parallaxIt('#pfp-cropped-image', -20); //strenght of movement
+    parallaxIt('#pfp-cropped-shadow', -25); //strenght of movement
+    parallaxIt('#introduction-banner', -5); //strenght of movement
   }
   mouse.moved = false;
 });
