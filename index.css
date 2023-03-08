@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=NTR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
 
 .left-container {
   display: flex;
@@ -260,11 +260,20 @@
   z-index: 2;
 }
 
+#games > h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 55px;
+  color: rgb(48, 53, 63);
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
 #games-grid-container {
   display: grid;
-  grid-template-columns: 450px 450px 450px 450px;
+  grid-template-columns: 450px 450px 450px;
   grid-row: auto auto;
-  grid-gap: 15px;
+  grid-gap: 40px;
 }
 
 @media (max-width: 1880px) {
@@ -281,6 +290,11 @@
 
 .games-grid-item {
   text-align: center;
+  border: 10px solid black;
+}
+
+/* add this in using intersection observer */
+.games-grid-item-load-animation {
   animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
@@ -319,10 +333,12 @@
   }
 }
 
+/* Game Designs */
+
 .game-background {
   background-size: cover;
   background-position: center center;
-  height: 60vh;
+  height: 95vh;
 }
 
 #lunarnauts {
