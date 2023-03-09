@@ -260,6 +260,13 @@
   z-index: 2;
 }
 
+@media (max-width: 940px) {
+  #games {
+    padding-bottom: 100px;
+    display: block;
+  }
+}
+
 #games > h1 {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 55px;
@@ -267,6 +274,12 @@
   align-self: flex-start;
   margin: 0;
   margin-bottom: 60px;
+}
+
+@media (max-width: 940px) {
+  #games > h1 {
+    margin-bottom: 0;
+  }
 }
 
 #games-grid-container {
@@ -282,20 +295,36 @@
   }
 }
 
-@media (max-width: 940px) {
-  #games-grid-container {
-    grid-template-columns: 450px;
-  }
-}
-
 .games-grid-item {
   text-align: center;
   border: 10px solid black;
 }
 
-/* add this in using intersection observer */
-.games-grid-item-load-animation {
+@media (max-width: 940px) {
+  .games-grid-item {
+    display: none;
+  }
+}
+
+/* intersection observer animation */
+.games-grid-item-load-animation1 {
   animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+.games-grid-item-load-animation2 {
+  animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation-delay: 0.2s;
+}
+.games-grid-item-load-animation3 {
+  animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation-delay: 0.4s;
+}
+.games-grid-item-load-animation4 {
+  animation: shadow-pop-br-out 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+@media (max-width: 1880px) {
+  .games-grid-item-load-animation4 {
+    animation-delay: 0.6s;
+  }
 }
 
 .games-grid-item > a > img {
