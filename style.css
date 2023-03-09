@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=NTR&display=swap');
 
-
 html {
   scroll-padding-top: 200px;
   scroll-padding: 50px;
@@ -16,6 +15,21 @@ body {
 
 .hidden {
   visibility: hidden;
+}
+
+h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 55px;
+  color: rgb(48, 53, 63);
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 940px) {
+  h1 {
+    margin-bottom: 0;
+  }
 }
 
 #nav-bar {
