@@ -13,6 +13,9 @@ const observer1 = new IntersectionObserver(function (entries, observer) {
     }
     console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation1');
+    setTimeout(function () {
+      entry.target.classList.toggle('games-grid-items');
+    }, 500);
     observer1.unobserve(entry.target);
   });
 }, options);
@@ -27,6 +30,9 @@ const observer2 = new IntersectionObserver(function (entries, observer) {
     }
     console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation2');
+    setTimeout(function () {
+      entry.target.classList.toggle('games-grid-items');
+    }, 1000);
     observer2.unobserve(entry.target);
   });
 }, options);
@@ -41,6 +47,9 @@ const observer3 = new IntersectionObserver(function (entries, observer) {
     }
     console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation3');
+    setTimeout(function () {
+      entry.target.classList.toggle('games-grid-items');
+    }, 1500);
     observer3.unobserve(entry.target);
   });
 }, options);
@@ -55,6 +64,9 @@ const observer4 = new IntersectionObserver(function (entries, observer) {
     }
     console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation4');
+    setTimeout(function () {
+      entry.target.classList.toggle('games-grid-items');
+    }, 500);
     observer4.unobserve(entry.target);
   });
 }, options);

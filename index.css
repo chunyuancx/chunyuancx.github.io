@@ -93,9 +93,9 @@
   flex-direction: column;
   padding: 20px 30px;
   color: #eeeeee;
-  background-color: #2727274d;
+  background-color: #2727277c;
   backdrop-filter: blur(2px);
-  height: 390px;
+  height: 420px;
 }
 
 @media (max-width: 1020px) {
@@ -166,12 +166,12 @@
 }
 
 #introduction-ethos {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 #introduction-para {
-  font-size: 20px;
+  font-size: 22px;
   width: 600px;
   line-height: 20px;
   margin-bottom: 30px;
@@ -317,7 +317,7 @@
   height: 100%;
 }
 
-.games-grid-item:hover {
+.games-grid-items:hover {
   animation: shadow-pop-br-in 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
