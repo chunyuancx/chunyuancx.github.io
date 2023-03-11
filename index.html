@@ -18,11 +18,11 @@
   <body>
     <div id="nav-bar">
       <div id="left-nav-bar">
-        <a href="#introduction" class="nav-tabs">HOME 🏠</a>
-        <a href="#games" class="nav-tabs">GAMES 👾</a>
-        <a href="#artworks" class="nav-tabs">ARTWORKS 🎨</a>
-        <a href="#narrative-design" class="nav-tabs">NARRATIVE DESIGN 📚</a>
-        <a href="" class="nav-tabs">ABOUT ME 🤵🏻</a>
+        <a href="#introduction" class="nav-tabs">HOME</a>
+        <a href="#games" class="nav-tabs">GAMES</a>
+        <a href="#artworks" class="nav-tabs">ARTWORKS</a>
+        <a href="#narrative-design" class="nav-tabs">NARRATIVE DESIGN</a>
+        <a href="" class="nav-tabs">ABOUT ME</a>
       </div>
       <div id="right-nav-bar">
         <div id="phone-number">+65 9322 9026</div>
@@ -69,12 +69,12 @@
         />
       </div>
       <div class="left-container" id="introduction-left-container-mobile-view">
-        <img style="pointer-events: none" src="Images/pfp.png" alt="pfp.png" />
+        <img src="Images/pfp.png" alt="pfp.png" />
       </div>
       <div class="wrap">
         <div class="animated-border">
           <div class="right-container" id="introduction-right-container">
-            <div class="neonText" id="introduction-title">GAME DESIGNER</div>
+            <div id="introduction-title">GAME DESIGNER</div>
             <div id="introduction-name">Branson Ang</div>
             <div id="introduction-ethos">
               Versatile. Creative. Self Directed.
@@ -123,7 +123,59 @@
     </div>
 
     <!-- Lunarnauts -->
-    <div class="game-background" id="lunarnauts"></div>
+    <div class="game-background" id="lunarnauts">
+      <div class="lunarnauts-grid-item" id="lunarnauts-mascot-container">
+        <div id="lunarnauts-mascot-x">
+          <img
+            id="lunarnauts-mascot-y"
+            src="Images/Mascots/Lunarnauts_Ape.png"
+            alt="Lunarnauts_Ape"
+          />
+        </div>
+      </div>
+      <div class="game-center-cta lunarnauts-grid-item">
+        <img
+          id="lunarnauts-logo"
+          src="Images/Logos/Lunarnauts_Logo.png"
+          alt="Lunarnauts_Logo"
+        />
+        <div class="watch-cta" id="lunarnauts-cta">
+          <img
+            class="watch-button"
+            id="lunarnauts-watch-button"
+            src="Icons/icon-play-button-50.png"
+            alt="play-icon"
+          />
+          <div class="watch-trailer" id="lunarnauts-watch-trailer">
+            WATCH TRAILER
+          </div>
+        </div>
+      </div>
+      <div class="lunarnauts-grid-item game-info">
+        <div class="game-role-container">
+          <img src="" alt="lunarnauts_Banana">
+          <div class="game-quote" id="lunarnauts-quote">Ba. na. na.</div>
+          <div class="game-para">
+            LunarNauts is a 2D resource management game where you control a
+            group of hot-headed apes trying to get to the moon!
+          </div>
+        </div>
+        <button class="game-button" id="lunarnauts-button">View Project</button>
+      </div>
+    </div>
+
+    <!-- Lunarnauts Modal -->
+    <div id="lunarnauts-trailer-Modal" class="trailer-modal">
+      <span class="trailer-modal-close">&times;</span>
+      <!-- Modal content -->
+      <div class="trailer-modal-content">
+        <iframe
+          id="ytplayer"
+          src="https://www.youtube.com/embed/mwAo-h2wFQg?enablejsapi=1"
+        >
+        </iframe>
+      </div>
+    </div>
 
     <!-- Afterlife -->
     <div class="game-background" id="afterlife"></div>
@@ -135,7 +187,7 @@
     <div class="game-background" id="grow-inc"></div>
 
     <!-- Artworks -->
-    <div id="artworks">
+    <!-- <div id="artworks">
       <h1>ARTWORKS.</h1>
       <div id="artworks-grid-container">
         <div class="artworks-grid-item">1</div>
@@ -145,24 +197,25 @@
         <div class="artworks-grid-item">5</div>
         <div class="artworks-grid-item">6</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Narative Design -->
-    <div id="narrative-design">
+    <!-- <div id="narrative-design">
       <h1>NARRATIVE DESIGN.</h1>
       <div>
         <div class="left-container">1</div>
         <div class="right-container">2</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Back to top button -->
     <a id="back-to-top-button"></a>
   </body>
 </html>
 <!-- scripts -->
-<script src="navbarSolidScroll.js"></script>
-<script src="intersectionObserver.js"></script>
-<script src="copyText.js"></script>
-<script src="parallaxImage.js"></script>
-<script src="backToTop.js"></script>
+<script src="Javascripts/navbarSolidScroll.js"></script>
+<script src="Javascripts/intersectionObserver.js"></script>
+<script src="Javascripts/copyText.js"></script>
+<script src="Javascripts/parallaxImage.js"></script>
+<script src="Javascripts/trailerModal.js"></script>
+<script src="Javascripts/backToTop.js"></script>

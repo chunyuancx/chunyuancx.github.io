@@ -69,14 +69,8 @@ h1 {
   transition: border-bottom 0.2s, border-width 0.2s;
 }
 
-.nav-tabs:link {
-  text-decoration: none;
-}
-
-.nav-tabs:visited {
-  text-decoration: none;
-}
-
+.nav-tabs:link,
+.nav-tabs:visited,
 .nav-tabs:active {
   text-decoration: none;
 }
@@ -215,7 +209,7 @@ h1 {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s, bottom 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 9999;
+  z-index: 9997;
 }
 
 #back-to-top-button::after {

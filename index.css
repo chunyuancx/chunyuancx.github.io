@@ -43,6 +43,7 @@
 
 #introduction-left-container-mobile-view > img {
   display: none;
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -62,6 +63,7 @@
   background-size: cover;
   height: 85vh;
   width: 101%;
+  filter: brightness(0.6);
 }
 
 @media (max-width: 1020px) {
@@ -72,7 +74,6 @@
 
 .pfp-cropped {
   height: 100%;
-  pointer-events: none;
 }
 
 #pfp-cropped-shadow {
@@ -80,6 +81,7 @@
   right: 10px;
   bottom: 15px;
   z-index: 5;
+  user-select: none;
 }
 
 #pfp-cropped-image {
@@ -87,14 +89,14 @@
   right: 0;
   bottom: 15px;
   z-index: 6;
+  user-select: none;
 }
 
 #introduction-right-container {
   flex-direction: column;
   padding: 20px 30px;
   color: #eeeeee;
-  background-color: #2727277c;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0);
   height: 420px;
 }
 
@@ -104,7 +106,6 @@
     align-items: center;
     height: unset;
     padding: 25px 30px;
-    padding-top: 0;
     backdrop-filter: blur(2px);
   }
 }
@@ -124,45 +125,44 @@
   }
 }
 
-.animated-border {
-  border: 1px solid #fff;
-  position: relative;
-}
-.animated-border::before,
-.animated-border::after {
-  position: absolute;
-  content: '';
-  width: 25px;
-  height: 25px;
-}
-.animated-border::before {
-  top: -10px;
-  left: -10px;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-}
-.animated-border::after {
-  bottom: -10px;
-  right: -10px;
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
-}
-
-.neonText {
-  color: #eeeeee;
-  text-shadow: 0 0 1px #0fa, 0 0 3px #0fa, 0 0 3px #0fa, 0 0 3px #0fa,
-    0 0 3px #0fa;
+@media (max-width: 1020px) {
+  .animated-border {
+    border: 1px solid #fff;
+    position: relative;
+  }
+  .animated-border::before,
+  .animated-border::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+  }
+  .animated-border::before {
+    top: -10px;
+    left: -10px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+  .animated-border::after {
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
 }
 
 #introduction-title {
-  animation: flicker 4s infinite alternate;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #0fa;
+  text-shadow: 7px 6px black, 6px 5px black, 5px 4px black, 4px 3px black,
+    3px 2px black, 2px 1px black, 1px 0px black;
   font-size: 3rem;
   letter-spacing: 4px;
 }
 
 #introduction-name {
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 40px;
-  line-height: 25px;
 }
 
 #introduction-ethos {
@@ -183,35 +183,14 @@
   }
 }
 
-/* Flickering animation */
-@keyframes flicker {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    text-shadow: 0 0 5px #0fa, 0 0 10px #0fa, 0 0 10px #0fa;
-  }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-  }
-}
-
 #introduction-button {
-  width: 100%;
-  border: 2px solid #0fa;
+  width: 50%;
   height: 45px;
   color: black;
   border: 5px solid black;
   box-shadow: 5px 5px black;
   font-weight: 800;
   text-transform: uppercase;
-  outline: 0;
   position: relative;
   z-index: 10;
   cursor: pointer;
@@ -348,7 +327,6 @@
 }
 
 /* Game Designs */
-
 .game-background {
   background-size: cover;
   background-position: center center;
@@ -369,8 +347,222 @@
   background-size: unset;
 }
 
-/* Artworks */
+.game-center-cta {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.watch-cta {
+  background-image: url('Videos/TimelessTale_video.mp4');
+  background-position: center center;
+  background-size: 100%;
+  width: 45vh;
+  height: 25vh;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.watch-cta:hover {
+  background-size: 110%;
+}
+
+.watch-button {
+  width: 40px;
+  margin-bottom: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.watch-cta:hover > .watch-button {
+  transform: scale(0.8);
+}
+
+.watch-trailer {
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+}
+
+.watch-cta:hover > .watch-trailer {
+  transform: scale(0.9);
+  color: white !important;
+}
+
+.trailer-modal {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.trailer-modal-content {
+  background-color: #00000000;
+  height: 68%;
+  width: 68%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trailer-modal-content > iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.trailer-modal-close {
+  display: inline-block;
+  background-color: #0fa;
+  border: 5px solid black;
+  box-shadow: 5px 5px black;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 105px;
+  right: 30px;
+  color: black;
+  font-size: 42px;
+  line-height: 65px;
+  font-weight: bold;
+}
+
+.trailer-modal-close:hover,
+.trailer-modal-close:focus {
+  cursor: pointer;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 19vw;
+}
+
+.game-role-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.game-quote {
+  font-size: 18px;
+  color: white;
+}
+
+.game-para {
+  font-size: 18px;
+  color: white;
+}
+
+.game-button {
+  height: 50px;
+  width: 50%;
+  color: black;
+  border: 5px solid black;
+  box-shadow: 5px 5px black;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Lunarnauts */
+#lunarnauts {
+  display: grid;
+  grid-template-columns: 35vw 30vw 35vw;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+#lunarnauts-mascot-container {
+  width: 100%;
+  height: 95vh;
+  pointer-events: none;
+  user-select: none;
+}
+
+#lunarnauts-mascot-y {
+  width: 250px;
+}
+
+#lunarnauts-mascot-x {
+  animation: lunarnauts-mascot-x 26s linear infinite alternate;
+}
+
+#lunarnauts-mascot-y {
+  animation: rotation 20s linear infinite alternate,
+    lunarnauts-mascot-y 14s linear infinite alternate;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes lunarnauts-mascot-x {
+  100% {
+    transform: translateX(calc(35vw - 250px));
+  }
+}
+
+@keyframes lunarnauts-mascot-y {
+  100% {
+    transform: translateY(calc(95vh - 250px));
+  }
+}
+
+#lunarnauts-logo {
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+#lunarnauts-cta {
+  border: 8px solid #f8cd61;
+  box-shadow: 10px 10px black, 10px 10px 15px #f8cd6198, 0 0 15px #f8cd6198;
+  transition: 0.3s ease-in-out;
+}
+
+#lunarnauts-cta:hover {
+  box-shadow: 16px 16px black, 10px 10px 15px #f8cd6198, 0 0 15px #f8cd6198;
+}
+
+#lunarnauts-watch-button {
+  filter: invert(80%) sepia(67%) saturate(419%) hue-rotate(340deg)
+    brightness(100%) contrast(95%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  /* img color filter change */
+}
+
+#lunarnauts-watch-trailer {
+  color: #f8cd61;
+}
+
+#lunarnauts-quote {
+  color: #f8cd61;
+}
+
+#lunarnauts-button {
+  background-color: #f8cd61;
+}
+
+/* Artworks */
 #artworks {
   background: rgb(23, 22, 16);
   display: flex;
@@ -396,7 +588,6 @@
 }
 
 /* Narrative Design */
-
 #narrative-design {
   background: white;
   display: flex;
