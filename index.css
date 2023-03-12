@@ -444,14 +444,14 @@
   cursor: pointer;
 }
 
-.game-info {
+.game-info-container {
   display: flex;
   flex-direction: column;
   color: black;
   width: 19vw;
 }
 
-.game-role-container {
+.game-info-details {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -554,12 +554,43 @@
   color: #f8cd61;
 }
 
+img[alt='lunarnauts_banana'] {
+  width: 150px;
+  align-self: center;
+  margin: 30px 0;
+}
+
 #lunarnauts-quote {
   color: #f8cd61;
 }
 
 #lunarnauts-button {
+  margin-top: 10px;
   background-color: #f8cd61;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
+}
+
+#lunarnauts-button:hover {
+  box-shadow: 8px 7px black;
+}
+
+#lunarnauts-button:before {
+  content: '';
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -5;
+  transition: right 0.2s ease-in;
+}
+
+#lunarnauts-button:hover:before {
+  right: 0;
 }
 
 /* Artworks */
