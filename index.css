@@ -356,16 +356,10 @@
 }
 
 .watch-cta {
-  background-image: url('Videos/TimelessTale_video.mp4');
-  background-position: center center;
-  background-size: 100%;
   width: 45vh;
-  height: 25vh;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 28vh;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   transition: 1s ease-in-out;
 }
@@ -374,13 +368,38 @@
   background-size: 110%;
 }
 
+.watch-cta-video {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.watch-cta-buttons {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .watch-button {
   width: 40px;
   margin-bottom: 10px;
   transition: 0.5s ease-in-out;
 }
 
-.watch-cta:hover > .watch-button {
+.watch-cta-buttons:hover > .watch-button {
   transform: scale(0.8);
 }
 
@@ -389,7 +408,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.watch-cta:hover > .watch-trailer {
+.watch-cta-buttons:hover > .watch-trailer {
   transform: scale(0.9);
   color: white !important;
 }
@@ -458,12 +477,12 @@
 }
 
 .game-quote {
-  font-size: 18px;
+  font-size: 22px;
   color: white;
 }
 
 .game-para {
-  font-size: 18px;
+  font-size: 22px;
   color: white;
 }
 
