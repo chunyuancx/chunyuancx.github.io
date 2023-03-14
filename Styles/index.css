@@ -24,7 +24,7 @@
   #introduction {
     height: 100vh;
     flex-direction: column;
-    background: url('Images/Wallpaper/Afterlife_Wallpaper.png');
+    background: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
     background-position: center center;
   }
 }
@@ -58,7 +58,7 @@
 #introduction-banner {
   position: absolute;
   top: -5px;
-  background: no-repeat url('Images/Wallpaper/fightbanner.png');
+  background: no-repeat url('../Images/Wallpaper/fightbanner.png');
   background-position: center top;
   background-size: cover;
   height: 85vh;
@@ -328,22 +328,28 @@
 
 /* Game Designs */
 .game-background {
+  display: grid;
+  grid-template-columns: 35vw 30vw 35vw;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
   background-size: cover;
   background-position: center center;
   height: 95vh;
 }
 
 #lunarnauts {
-  background-image: url('Images/Wallpaper/Lunarnauts_Wallpaper.png');
+  background-image: url('../Images/Wallpaper/Lunarnauts_Wallpaper.png');
 }
 #afterlife {
-  background-image: url('Images/Wallpaper/Afterlife_Wallpaper.png');
+  background-image: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
 }
 #timeless-tales {
-  background-image: url('Images/Wallpaper/TimelessTale_Wallpaper.png');
+  background-image: url('../Images/Wallpaper/TimelessTale_Wallpaper.png');
 }
 #grow-inc {
-  background-image: url('Images/Wallpaper/Growinc_Wallpaper.png');
+  background-image: url('../Images/Wallpaper/Growinc_Wallpaper.png');
   background-size: unset;
 }
 
@@ -494,122 +500,6 @@
   box-shadow: 5px 5px black;
   font-weight: 800;
   text-transform: uppercase;
-}
-
-/* Lunarnauts */
-#lunarnauts {
-  display: grid;
-  grid-template-columns: 35vw 30vw 35vw;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-evenly;
-}
-
-#lunarnauts-mascot-container {
-  width: 100%;
-  height: 95vh;
-  pointer-events: none;
-  user-select: none;
-}
-
-#lunarnauts-mascot-y {
-  width: 250px;
-}
-
-#lunarnauts-mascot-x {
-  animation: lunarnauts-mascot-x 26s linear infinite alternate;
-}
-
-#lunarnauts-mascot-y {
-  animation: rotation 20s linear infinite alternate,
-    lunarnauts-mascot-y 14s linear infinite alternate;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes lunarnauts-mascot-x {
-  100% {
-    transform: translateX(calc(35vw - 250px));
-  }
-}
-
-@keyframes lunarnauts-mascot-y {
-  100% {
-    transform: translateY(calc(95vh - 250px));
-  }
-}
-
-#lunarnauts-logo {
-  width: 100%;
-  margin-bottom: 10vh;
-}
-
-#lunarnauts-cta {
-  border: 8px solid #f8cd61;
-  box-shadow: 10px 10px black, 10px 10px 15px #f8cd6198, 0 0 15px #f8cd6198;
-  transition: 0.3s ease-in-out;
-}
-
-#lunarnauts-cta:hover {
-  box-shadow: 16px 16px black, 10px 10px 15px #f8cd6198, 0 0 15px #f8cd6198;
-}
-
-#lunarnauts-watch-button {
-  filter: invert(80%) sepia(67%) saturate(419%) hue-rotate(340deg)
-    brightness(100%) contrast(95%);
-  /* https://codepen.io/sosuke/pen/Pjoqqp */
-  /* img color filter change */
-}
-
-#lunarnauts-watch-trailer {
-  color: #f8cd61;
-}
-
-img[alt='lunarnauts_banana'] {
-  width: 150px;
-  align-self: center;
-  margin: 30px 0;
-}
-
-#lunarnauts-quote {
-  color: #f8cd61;
-}
-
-#lunarnauts-button {
-  margin-top: 10px;
-  background-color: #f8cd61;
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
-}
-
-#lunarnauts-button:hover {
-  box-shadow: 8px 7px black;
-}
-
-#lunarnauts-button:before {
-  content: '';
-  position: absolute;
-  background: white;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  top: 0;
-  z-index: -5;
-  transition: right 0.2s ease-in;
-}
-
-#lunarnauts-button:hover:before {
-  right: 0;
 }
 
 /* Artworks */

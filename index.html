@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Branson Ang Portfolio</title>
     <link rel="icon" type="image/x-icon" href="Icons/icon-singapore-48.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="Styles/global.css" />
+    <link rel="stylesheet" href="Styles/index.css" />
+    <link rel="stylesheet" href="Styles/lunarnauts.css" />
+    <link rel="stylesheet" href="Styles/afterlife.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -188,8 +190,56 @@
     </div>
 
     <!-- Afterlife -->
-    <div class="game-background" id="afterlife"></div>
-
+    <div class="game-background" id="afterlife">
+      <div class="lunarnauts-grid-item" id="lunarnauts-mascot-container">
+        <div id="lunarnauts-mascot-x">
+          <img
+            id="lunarnauts-mascot-y"
+            src="Images/Mascots/Lunarnauts_Ape.png"
+            alt="Lunarnauts_Ape"
+          />
+        </div>
+      </div>
+      <div class="game-center-cta lunarnauts-grid-item">
+        <img
+          id="lunarnauts-logo"
+          src="Images/Logos/Lunarnauts_Logo.png"
+          alt="Lunarnauts_Logo"
+        />
+        <div class="watch-cta" id="lunarnauts-cta">
+          <video
+            class="watch-cta-video"
+            playsinline
+            autoplay
+            loop
+            muted
+            src="Videos/TimelessTale_video.mp4"
+          ></video>
+          <div class="watch-cta-buttons">
+            <img
+              class="watch-button"
+              id="lunarnauts-watch-button"
+              src="Icons/icon-play-button-50.png"
+              alt="play-icon"
+            />
+            <div class="watch-trailer" id="lunarnauts-watch-trailer">
+              WATCH TRAILER
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lunarnauts-grid-item game-info-container">
+        <div class="game-info-details">
+          <img src="Images/lunarnauts_banana.png" alt="lunarnauts_banana" />
+          <div class="game-quote" id="lunarnauts-quote">Ba. na. na.</div>
+          <div class="game-para">
+            Lunarnauts is a 2D resource management game where you control a
+            group of hot-headed apes trying to get to the moon!
+          </div>
+        </div>
+        <button class="game-button" id="lunarnauts-button">View Project</button>
+      </div>
+    </div>
     <!-- Timeless Tales -->
     <div class="game-background" id="timeless-tales"></div>
 
