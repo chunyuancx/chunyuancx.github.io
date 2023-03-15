@@ -339,20 +339,6 @@
   height: 95vh;
 }
 
-#lunarnauts {
-  background-image: url('../Images/Wallpaper/Lunarnauts_Wallpaper.png');
-}
-#afterlife {
-  background-image: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
-}
-#timeless-tales {
-  background-image: url('../Images/Wallpaper/TimelessTale_Wallpaper.png');
-}
-#grow-inc {
-  background-image: url('../Images/Wallpaper/Growinc_Wallpaper.png');
-  background-size: unset;
-}
-
 .game-center-cta {
   width: 30vw;
   display: flex;
@@ -489,6 +475,7 @@
 
 .game-para {
   font-size: 22px;
+  line-height: 200%;
   color: white;
 }
 

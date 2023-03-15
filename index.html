@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Styles/lunarnauts.css" />
     <link rel="stylesheet" href="Styles/afterlife.css" />
     <link rel="stylesheet" href="Styles/timelesstales.css" />
+    <link rel="stylesheet" href="Styles/growinc.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -179,7 +180,9 @@
 
     <!-- Lunarnauts Modal -->
     <div id="lunarnauts-trailer-modal" class="trailer-modal">
-      <span id="lunarnauts-trailer-modal-close" class="trailer-modal-close">&times;</span>
+      <span id="lunarnauts-trailer-modal-close" class="trailer-modal-close"
+        >&times;</span
+      >
       <!-- Modal content -->
       <div class="trailer-modal-content">
         <iframe
@@ -224,13 +227,14 @@
         </div>
       </div>
       <div class="game-info-container">
-        <div class="game-info-details">
-          <img src="Images/lunarnauts_banana.png" alt="afterlife_plant" />
-          <!-- replace this -->
-          <div class="game-quote" id="afterlife-quote">Ba. na. na.</div>
-          <div class="game-para">
-            Lunarnauts is a 2D resource management game where you control a
-            group of hot-headed apes trying to get to the moon!
+        <div class="game-info-details" id="afterlife-game-info-details">
+          <!-- add aim image maybe -->
+          <div class="game-quote" id="afterlife-quote">Pew! Pew!</div>
+          <div class="game-para" id="afterlife-para">
+            AfterLife is a top-down RTS set in a post-apocalyptic world filled
+            with zombies. Your job is to control a group of units and kill all
+            zombies using strategies and tactics in a close-quarters combat
+            environment.
           </div>
         </div>
         <button class="game-button" id="afterlife-button">View Project</button>
@@ -239,7 +243,9 @@
 
     <!-- Afterlife Modal -->
     <div id="afterlife-trailer-modal" class="trailer-modal">
-      <span id="afterlife-trailer-modal-close" class="trailer-modal-close">&times;</span>
+      <span id="afterlife-trailer-modal-close" class="trailer-modal-close"
+        >&times;</span
+      >
       <!-- Modal content -->
       <div class="trailer-modal-content">
         <iframe
@@ -249,8 +255,6 @@
         </iframe>
       </div>
     </div>
-
-
 
     <!-- Timeless Tales -->
     <div class="game-background" id="timeless-tales"></div>

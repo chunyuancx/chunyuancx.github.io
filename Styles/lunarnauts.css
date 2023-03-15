@@ -1,4 +1,8 @@
 /* Lunarnauts */
+#lunarnauts {
+  background-image: url('../Images/Wallpaper/Lunarnauts_Wallpaper.png');
+}
+
 #lunarnauts-mascot-container {
   width: 100%;
   height: 95vh;
