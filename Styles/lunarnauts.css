@@ -6,15 +6,12 @@
   user-select: none;
 }
 
-#lunarnauts-mascot-y {
-  width: 250px;
-}
-
 #lunarnauts-mascot-x {
   animation: lunarnauts-mascot-x 26s linear infinite alternate;
 }
 
 #lunarnauts-mascot-y {
+  width: 250px;
   animation: rotation 20s linear infinite alternate,
     lunarnauts-mascot-y 14s linear infinite alternate;
 }
