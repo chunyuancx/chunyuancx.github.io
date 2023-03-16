@@ -12,8 +12,12 @@
   align-items: flex-end;
 }
 
-img[alt='Witch-Idle'] {
-  width: 35vw;
+#witch-idle {
+  background-image: url('../Images/Mascots/Witch_Idle.png');
+  background-size: 90%;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 45vw;
 }
 
 #timelesstale-logo {
