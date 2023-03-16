@@ -11,7 +11,6 @@ const observer1 = new IntersectionObserver(function (entries, observer) {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation1');
     setTimeout(function () {
       entry.target.classList.toggle('games-grid-items');
@@ -28,7 +27,6 @@ const observer2 = new IntersectionObserver(function (entries, observer) {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation2');
     setTimeout(function () {
       entry.target.classList.toggle('games-grid-items');
@@ -45,7 +43,6 @@ const observer3 = new IntersectionObserver(function (entries, observer) {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation3');
     setTimeout(function () {
       entry.target.classList.toggle('games-grid-items');
@@ -62,7 +59,6 @@ const observer4 = new IntersectionObserver(function (entries, observer) {
     if (!entry.isIntersecting) {
       return;
     }
-    console.log(entry.target);
     entry.target.classList.toggle('games-grid-item-load-animation4');
     setTimeout(function () {
       entry.target.classList.toggle('games-grid-items');

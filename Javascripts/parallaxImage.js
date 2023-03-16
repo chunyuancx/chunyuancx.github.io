@@ -13,6 +13,7 @@ TweenLite.ticker.addEventListener('tick', function () {
     parallaxIt('#pfp-cropped-image', -20); //strenght of movement
     parallaxIt('#pfp-cropped-shadow', -25); //strenght of movement
     parallaxIt('#introduction-banner', -5); //strenght of movement
+    parallaxIt('#witch-idle', -15); //strenght of movement
   }
   mouse.moved = false;
 });

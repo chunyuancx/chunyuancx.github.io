@@ -81,6 +81,7 @@ img[alt='lunarnauts_banana'] {
   margin-top: 10px;
   background-color: #f8cd61;
   position: relative;
+  width: 100%;
   z-index: 10;
   cursor: pointer;
   transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;

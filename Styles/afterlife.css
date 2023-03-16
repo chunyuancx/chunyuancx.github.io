@@ -17,7 +17,7 @@
 }
 
 #afterlife-cta {
-  border: 8px solid #ffffff;
+  border: 8px solid #61d7f8;
   box-shadow: 10px 10px black, 10px 10px 15px #61e6f898, 0 0 15px #61e6f898;
   transition: 0.3s ease-in-out;
   margin-top: -25px;
@@ -50,6 +50,7 @@
   margin-top: 10px;
   background-color: #61d7f8;
   position: relative;
+  width: 100%;
   z-index: 10;
   cursor: pointer;
   transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
