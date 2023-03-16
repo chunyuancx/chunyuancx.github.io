@@ -74,9 +74,13 @@
 
 .pfp-cropped {
   height: 100%;
+  width: 260px;
 }
 
 #pfp-cropped-shadow {
+  background-image: url('../Images/pfp-cropped-shadow.png');
+  background-repeat: no-repeat;
+  background-size: 90%;
   position: relative;
   right: 10px;
   bottom: 15px;
@@ -85,6 +89,9 @@
 }
 
 #pfp-cropped-image {
+  background-image: url('../Images/pfp-cropped.png');
+  background-repeat: no-repeat;
+  background-size: 90%;
   position: absolute;
   right: 0;
   bottom: 15px;
