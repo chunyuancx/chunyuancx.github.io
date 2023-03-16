@@ -42,11 +42,33 @@ afterlifeCloseButton.onclick = function () {
   });
 };
 
+//timelesstale
+var timelesstaleModal = document.getElementById('timelesstale-trailer-modal');
+var timelesstaleWatchTrailer = document.getElementById('timelesstale-cta');
+var timelesstaleCloseButton = document.getElementsByClassName(
+  'trailer-modal-close'
+)[2];
+
+timelesstaleWatchTrailer.onclick = function () {
+  timelesstaleModal.style.display = 'block';
+};
+
+timelesstaleCloseButton.onclick = function () {
+  timelesstaleModal.style.display = 'none';
+  $('iframe').each(function () {
+    this.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      '*'
+    );
+  });
+};
+
 // global
 window.onclick = function (event) {
-  if (event.target == afterlifeModal || event.target == lunarnautsModal) {
+  if (event.target == afterlifeModal || event.target == lunarnautsModal || event.target == timelesstaleModal) {
     afterlifeModal.style.display = 'none';
     lunarnautsModal.style.display = 'none';
+    timelesstaleModal.style.display = 'none';
 
     $('iframe').each(function () {
       this.contentWindow.postMessage(

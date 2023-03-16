@@ -17,7 +17,7 @@
 }
 
 #afterlife-cta {
-  border: 8px solid #61d7f8;
+  border: 8px solid #ffffff;
   box-shadow: 10px 10px black, 10px 10px 15px #61e6f898, 0 0 15px #61e6f898;
   transition: 0.3s ease-in-out;
   margin-top: -25px;
@@ -28,20 +28,14 @@
 }
 
 #afterlife-watch-button {
-  filter: invert(75%) sepia(33%) saturate(846%) hue-rotate(158deg)
-    brightness(100%) contrast(95%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(353deg)
+    brightness(113%) contrast(100%);
   /* https://codepen.io/sosuke/pen/Pjoqqp */
   /* img color filter change */
 }
 
 #afterlife-watch-trailer {
-  color: #61d7f8;
-}
-
-img[alt='lunarnauts_banana'] {
-  width: 150px;
-  align-self: center;
-  margin: 30px 0;
+  color: #ffffff;
 }
 
 #afterlife-game-info-details {

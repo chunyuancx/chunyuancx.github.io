@@ -1,0 +1,70 @@
+/* timelesstale */
+#timeless-tale {
+  background-image: url('../Images/Wallpaper/TimelessTale_Wallpaper.png');
+}
+
+#timelesstale-mascot-container {
+  width: 100%;
+  height: 95vh;
+  pointer-events: none;
+  user-select: none;
+}
+
+#timelesstale-logo {
+  width: 70%;
+  margin-right: -30px;
+}
+
+#timelesstale-cta {
+  border: 8px solid #272727;
+  box-shadow: 10px 10px black, 10px 10px 15px #272727a0, 0 0 15px #272727a0;
+  transition: 0.3s ease-in-out;
+}
+
+#timelesstale-cta:hover {
+  box-shadow: 16px 16px black, 10px 10px 15px #272727a0, 0 0 15px #272727a0;
+}
+
+#timelesstale-watch-button {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(42deg)
+    brightness(100%) contrast(98%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  /* img color filter change */
+}
+
+#timelesstale-watch-trailer {
+  color: #ffffff;
+}
+
+#timelesstale-quote {
+  color: #cbb676;
+}
+
+#timelesstale-button {
+  margin-top: 10px;
+  background-color: #cbb676;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
+}
+
+#timelesstale-button:hover {
+  box-shadow: 8px 7px black;
+}
+
+#timelesstale-button:before {
+  content: '';
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -5;
+  transition: right 0.2s ease-in;
+}
+
+#timelesstale-button:hover:before {
+  right: 0;
+}

@@ -489,8 +489,8 @@
   text-transform: uppercase;
 }
 
-/* Artworks */
-#artworks {
+/* Illustrations */
+#illustrations {
   background: rgb(23, 22, 16);
   display: flex;
   flex-direction: column;
@@ -500,18 +500,20 @@
   padding-bottom: 125px;
 }
 
-#artworks > h1 {
+#illustrations > h1 {
   color: white;
 }
 
-#artworks-grid-container {
+#illustrations-grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-row: auto auto;
-  grid-gap: 15px;
+  grid-gap: 5vh;
+  align-items: center;
+  justify-items: center;
 }
 
-.artworks-grid-item {
+.illustrations-grid-item {
+  width: 20vw;
 }
 
 /* Narrative Design */
