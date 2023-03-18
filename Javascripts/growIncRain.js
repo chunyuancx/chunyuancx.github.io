@@ -1,16 +1,17 @@
-var makeItRain = function () {
+const makeItRain = () => {
   //clear out everything
-  $('.rain').empty();
+  const rain = document.querySelector('.rain');
+  rain.innerHTML = '';
 
-  var increment = 0;
-  var drops = '';
+  let increment = 0;
+  let drops = '';
 
   while (increment < 100) {
     //couple random numbers to use for various randomizations
     //random number between 98 and 1
-    var randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
+    const randoHundo = Math.floor(Math.random() * (98 - 1 + 1) + 1);
     //random number between 5 and 2
-    var randoFiver = Math.floor(Math.random() * (5 - 2 + 1) + 2);
+    const randoFiver = Math.floor(Math.random() * (5 - 2 + 1) + 2);
     //increment
     increment += randoFiver;
     //add in a new raindrop with various randomizations to certain CSS properties
@@ -34,7 +35,7 @@ var makeItRain = function () {
       's;"></div></div>';
   }
 
-  $('.rain').append(drops);
+  rain.insertAdjacentHTML('beforeend', drops);
 };
 
 makeItRain();

@@ -509,6 +509,7 @@
 
 #illustrations > h1 {
   color: white;
+  margin-bottom: 90px;
 }
 
 #illustrations-grid-container {
@@ -521,6 +522,42 @@
 
 .illustrations-grid-item {
   width: 20vw;
+  opacity: 0;
+}
+
+.tilt-in-fwd-tr {
+  -webkit-animation: tilt-in-fwd-tr 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: tilt-in-fwd-tr 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform: rotateY(10deg) rotateX(25deg) translate(50px, -50px)
+      skew(-15deg, 5deg);
+    transform: rotateY(10deg) rotateX(25deg) translate(50px, -50px)
+      skew(-15deg, 5deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-fwd-tr {
+  0% {
+    -webkit-transform: rotateY(10deg) rotateX(25deg) translate(50px, -50px)
+      skew(-15deg, 5deg);
+    transform: rotateY(10deg) rotateX(25deg) translate(50px, -50px)
+      skew(-15deg, 5deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
 }
 
 /* Narrative Design */

@@ -1,4 +1,4 @@
-const options = {
+const cardOptions = {
   root: null,
   threshold: 0.15,
   rootMargin: '-200px',
@@ -17,7 +17,7 @@ const observer1 = new IntersectionObserver(function (entries, observer) {
     }, 500);
     observer1.unobserve(entry.target);
   });
-}, options);
+}, cardOptions);
 observer1.observe(lunarnauts);
 
 //afterlife
@@ -33,7 +33,7 @@ const observer2 = new IntersectionObserver(function (entries, observer) {
     }, 1000);
     observer2.unobserve(entry.target);
   });
-}, options);
+}, cardOptions);
 observer2.observe(afterlife);
 
 //afterlife
@@ -49,7 +49,7 @@ const observer3 = new IntersectionObserver(function (entries, observer) {
     }, 1500);
     observer3.unobserve(entry.target);
   });
-}, options);
+}, cardOptions);
 observer3.observe(timelesstale);
 
 //afterlife
@@ -65,5 +65,33 @@ const observer4 = new IntersectionObserver(function (entries, observer) {
     }, 500);
     observer4.unobserve(entry.target);
   });
-}, options);
+}, cardOptions);
 observer4.observe(growinc);
+
+//illustrations
+const illustrationsOptions = {
+  root: null,
+  threshold: 0.15,
+  rootMargin: '-100px',
+};
+
+const illustrationsObserver = new IntersectionObserver(function (
+  entries,
+  observer
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('tilt-in-fwd-tr');
+    illustrationsObserver.unobserve(entry.target);
+  });
+},
+illustrationsOptions);
+
+const illustrations = '.illustrations-grid-item';
+document.querySelectorAll(illustrations).forEach((i) => {
+  if (i) {
+    illustrationsObserver.observe(i);
+  }
+});
