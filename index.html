@@ -21,13 +21,13 @@
     />
   </head>
   <body>
-    <div id="nav-bar">
+    <nav>
       <div id="left-nav-bar">
-        <a href="#introduction" class="nav-tabs">HOME</a>
-        <a href="#games" class="nav-tabs">GAMES</a>
-        <a href="#illustrations" class="nav-tabs">ILLUSTRATIONS</a>
-        <a href="#narrative-design" class="nav-tabs">NARRATIVE DESIGN</a>
-        <a href="" class="nav-tabs">ABOUT ME</a>
+        <a href="#introduction">HOME</a>
+        <a href="#games">GAMES</a>
+        <a href="#illustrations">ILLUSTRATIONS</a>
+        <a href="#narrative-design">NARRATIVE DESIGN</a>
+        <a href="">ABOUT ME</a>
       </div>
       <div id="right-nav-bar">
         <div id="phone-number">+65 9322 9026</div>
@@ -55,7 +55,7 @@
             alt="linkedin-icon"
         /></a>
       </div>
-    </div>
+    </nav>
     <!-- Introduction -->
     <div id="introduction">
       <div id="introduction-banner"></div>
@@ -66,27 +66,23 @@
       <div class="left-container" id="introduction-left-container-mobile-view">
         <img src="Images/pfp.png" alt="pfp.png" />
       </div>
-      <div class="wrap">
-        <div class="animated-border">
-          <div class="right-container" id="introduction-right-container">
-            <div id="introduction-title">GAME DESIGNER</div>
-            <div id="introduction-name">Branson Ang</div>
-            <div id="introduction-ethos">
-              Versatile. Creative. Self Directed.
-            </div>
-            <div id="introduction-para">
-              Hello! I'm an aspiring designer based in Singapore. Versatility
-              and creativity are the pillars of my design philosophy that I
-              pride myself on. Small and subtle elements of games that bring it
-              to life are what I aspire to create. One who will constantly seek
-              out continual improvements, Enhancing ideas is one of my many
-              strengths. When it comes to developing games, the experience of my
-              players is my core focus.
-            </div>
-            <button id="introduction-button">Learn More About Me</button>
+      <main class="wrap animated-border">
+        <div class="right-container" id="introduction-right-container">
+          <div id="introduction-title">GAME DESIGNER</div>
+          <div id="introduction-name">Branson Ang</div>
+          <div id="introduction-ethos">Versatile. Creative. Self Directed.</div>
+          <div id="introduction-para">
+            Hello! I'm an aspiring designer based in Singapore. Versatility and
+            creativity are the pillars of my design philosophy that I pride
+            myself on. Small and subtle elements of games that bring it to life
+            are what I aspire to create. One who will constantly seek out
+            continual improvements, Enhancing ideas is one of my many strengths.
+            When it comes to developing games, the experience of my players is
+            my core focus.
           </div>
+          <button id="introduction-button">Learn More About Me</button>
         </div>
-      </div>
+      </main>
     </div>
     <!-- Games -->
     <div id="games">
@@ -388,7 +384,8 @@
 <script src="Javascripts/navbarSolidScroll.js"></script>
 <script src="Javascripts/intersectionObserver.js"></script>
 <script src="Javascripts/copyText.js"></script>
-<script src="Javascripts/parallaxImage.js"></script>
 <script src="Javascripts/trailerModal.js"></script>
 <script src="Javascripts/growIncRain.js"></script>
 <script src="Javascripts/backToTop.js"></script>
+<script src="Javascripts/parallaxImage.js"></script>
+

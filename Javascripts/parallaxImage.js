@@ -1,37 +1,23 @@
-(function () {
-  // Add event listener
-  document.addEventListener('mousemove', parallax);
+document.addEventListener('mousemove', function (e) {
   const pfpCroppedImage = document.querySelector('#pfp-cropped-image');
   const pfpCroppedShadow = document.querySelector('#pfp-cropped-shadow');
   const introBanner = document.querySelector('#introduction-banner');
   const witch = document.querySelector('#witch-idle');
-  // Magic happens here
-  function parallax(e) {
-    let _w = window.innerWidth;
-    let _h = window.innerHeight;
-    let _mouseX = e.clientX;
-    let _mouseY = e.clientY;
 
-    //pfp
-    let _pfpImageX = `${((_mouseX - _w / 2) / _w) * -60}%`;
-    let _pfpImageY = `${((_mouseY - _h / 2) / _h) * -60}%`;
-    pfpCroppedImage.style.backgroundPositionX = _pfpImageX;
-    pfpCroppedImage.style.backgroundPositionY = _pfpImageY;
-    let _pfpShadowX = `${((_mouseX - _w / 2) / _w) * -90}%`;
-    let _pfpShadowY = `${((_mouseY - _h / 2) / _h) * -90}%`;
-    pfpCroppedShadow.style.backgroundPositionX = _pfpShadowX;
-    pfpCroppedShadow.style.backgroundPositionY = _pfpShadowY;
+  //pfp
+  let pfpImageX = (window.innerWidth / 2 - e.clientX) / 30;
+  let pfpImageY = (window.innerHeight / 2 - e.clientY) / 30;
+  pfpCroppedImage.style.transform = `translate(${pfpImageX}px, ${pfpImageY}px)`;
+  let pfpShadowX = (window.innerWidth / 2 - e.clientX) / 20;
+  let pfpShadowY = (window.innerHeight / 2 - e.clientY) / 20;
+  pfpCroppedShadow.style.transform = `translate(${pfpShadowX}px, ${pfpShadowY}px)`;
 
-    //intro-banner
-    let _introBannerX = `${((_mouseX - _w / 2) / _w) * -10}%`;
-    let _introBannerY = `${((_mouseY - _h / 2) / _h) * -10}%`;
-    introBanner.style.backgroundPositionX = _introBannerX;
-    introBanner.style.backgroundPositionY = _introBannerY;
+  //intro-banner
+  let introBannerX = (window.innerWidth / 2 - e.clientX) / 100;
+  let introBannerY = (window.innerHeight / 2 - e.clientY) / 100;
+  introBanner.style.transform = `translate(${introBannerX}px, ${introBannerY}px)`;
 
-    //Witch
-    let _witchX = `${((_mouseX - _w / 2) / _w) * -35}%`;
-    let _witchY = `${((_mouseY - _h / 2) / _h) * -35}%`;
-    witch.style.backgroundPositionX = _witchX;
-    witch.style.backgroundPositionY = _witchY;
-  }
-})();
+  //Witch
+  let witchX = (window.innerWidth / 2 - e.clientX) / -4;
+  witch.style.transform = `translate(${witchX}px, 0px)`;
+});

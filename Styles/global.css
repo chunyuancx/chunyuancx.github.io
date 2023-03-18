@@ -32,7 +32,7 @@ h1 {
   }
 }
 
-#nav-bar {
+nav {
   position: fixed;
   top: 0;
   height: 75px;
@@ -48,18 +48,18 @@ h1 {
 }
 
 @media (max-width: 1135px) {
-  #nav-bar {
+  nav {
     padding: 0 10px;
   }
 }
 
 @media (max-width: 1020px) {
-  #nav-bar {
+  nav {
     display: none;
   }
 }
 
-.nav-tabs {
+nav > #left-nav-bar > a {
   padding: 0 10px;
   color: white;
   text-decoration: none;
@@ -69,20 +69,20 @@ h1 {
   transition: border-bottom 0.2s, border-width 0.2s;
 }
 
-.nav-tabs:link,
-.nav-tabs:visited,
-.nav-tabs:active {
+nav > #left-nav-bar > a:link,
+nav > #left-nav-bar > a:visited,
+nav > #left-nav-bar > a:active {
   text-decoration: none;
 }
 
-.nav-tabs:hover {
+nav > #left-nav-bar > a:hover {
   text-decoration: none;
   border-bottom: solid white;
   border-width: 4px;
 }
 
 @media (max-width: 1135px) {
-  .nav-tabs {
+  nav > #left-nav-bar > a {
     padding: 5px 8px;
   }
 }
@@ -195,6 +195,7 @@ h1 {
 }
 
 /* back to top button */
+
 #back-to-top-button {
   display: inline-block;
   background-color: white;

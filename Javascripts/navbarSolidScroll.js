@@ -4,8 +4,8 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById('nav-bar').style.background = '#0c0c0c';
+    document.querySelector('nav').style.background = '#0c0c0c';
   } else {
-    document.getElementById('nav-bar').style.background = 'none';
+    document.querySelector('nav').style.background = 'none';
   }
 }

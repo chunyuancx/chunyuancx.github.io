@@ -1,7 +1,7 @@
 /* Afterlife */
 #afterlife {
   background-image: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
-  /* blur this image maybe */
+  cursor: crosshair;
 }
 
 #afterlife-mascot-container {

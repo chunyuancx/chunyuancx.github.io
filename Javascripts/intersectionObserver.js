@@ -83,7 +83,7 @@ const illustrationsObserver = new IntersectionObserver(function (
     if (!entry.isIntersecting) {
       return;
     }
-    entry.target.classList.toggle('tilt-in-fwd-tr');
+    entry.target.classList.toggle('slide-in-top');
     illustrationsObserver.unobserve(entry.target);
   });
 },

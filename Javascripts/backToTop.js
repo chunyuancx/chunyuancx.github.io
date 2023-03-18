@@ -1,14 +1,14 @@
-var btn = $('#back-to-top-button');
+const btn = document.querySelector('#back-to-top-button');
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 200) {
-    btn.addClass('show');
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 200) {
+    btn.classList.add('show');
   } else {
-    btn.removeClass('show');
+    btn.classList.remove('show');
   }
 });
 
-btn.on('click', function (e) {
+btn.addEventListener('click', function (e) {
   e.preventDefault();
-  $('html, body').animate({ scrollTop: 0 }, '200');
+  window.scrollTo({ top: 0 });
 });
