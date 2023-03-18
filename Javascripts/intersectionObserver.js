@@ -71,8 +71,8 @@ observer4.observe(growinc);
 //illustrations
 const illustrationsOptions = {
   root: null,
-  threshold: 0.15,
-  rootMargin: '-100px',
+  threshold: 0.1,
+  rootMargin: '-50px',
 };
 
 const illustrationsObserver = new IntersectionObserver(function (
