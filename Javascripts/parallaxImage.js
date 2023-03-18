@@ -13,7 +13,7 @@ document.addEventListener('mousemove', function (e) {
   pfpCroppedShadow.style.transform = `translate(${pfpShadowX}px, ${pfpShadowY}px)`;
 
   //intro-banner
-  let introBannerX = (window.innerWidth / 2 - e.clientX) / 100;
+  let introBannerX = (window.innerWidth / 2 - e.clientX) / 110;
   let introBannerY = (window.innerHeight / 2 - e.clientY) / 100;
   introBanner.style.transform = `translate(${introBannerX}px, ${introBannerY}px)`;
 
