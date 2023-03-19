@@ -5,10 +5,21 @@
 }
 
 #afterlife-mascot-container {
-  width: 100%;
   height: 95vh;
-  pointer-events: none;
   user-select: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#afterlife-mascot-container > img {
+  margin: 0.5vh 0;
+  transition: 0.2s ease-in-out;
+}
+
+#afterlife-mascot-container > img:hover {
+  transform: scale(1.1);
 }
 
 #afterlife-logo {
