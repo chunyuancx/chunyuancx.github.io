@@ -345,6 +345,8 @@
   background-size: cover;
   background-position: center center;
   height: 95vh;
+  scroll-snap-align: start;
+
 }
 
 .game-center-cta {

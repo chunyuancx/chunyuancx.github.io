@@ -5,6 +5,7 @@ html {
   scroll-padding: 50px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 body {
