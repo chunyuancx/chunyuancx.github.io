@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Minecraft;
+  src: url('../Fonts/MinecraftRegular-Bmg3.otf');
+}
+
 /* grow-inc */
 #grow-inc {
   background-image: url('../Images/Wallpaper/Growinc_Wallpaper.png');
@@ -90,3 +95,83 @@
   }
 }
 
+#growinc-mascot-container {
+  width: 100%;
+  height: 95vh;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+#growinc-logo {
+  width: 70%;
+}
+
+#growinc-cta {
+  margin-top: 40px;
+  border: 8px solid #21242e;
+  box-shadow: 10px 10px black, 10px 10px 15px #21242ec7, 0 0 15px #21242ec7;
+  transition: 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+#growinc-cta:hover {
+  box-shadow: 16px 16px black, 10px 10px 15px #21242ec7, 0 0 15px #21242ec7;
+}
+
+#growinc-watch-button {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(42deg)
+    brightness(100%) contrast(98%);
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  /* img color filter change */
+}
+
+#growinc-watch-trailer {
+  color: #ffffff;
+}
+
+#growinc-game-info-details {
+  padding: 15px 25px;
+  backdrop-filter: blur(3px);
+  font-family: Minecraft;
+}
+
+#growinc-quote {
+  color: #97a1cf;
+  margin-bottom: 20px;
+}
+
+#growinc-button {
+  margin-top: 10px;
+  background-color: #97a1cf;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
+  font-family: Minecraft;
+  border: 5px solid #21242e;
+  color: #21242e;
+}
+
+#growinc-button:hover {
+  box-shadow: 8px 7px black;
+  color: white;
+}
+
+#growinc-button:before {
+  content: '';
+  position: absolute;
+  background: #52545d;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -5;
+  transition: right 0.2s ease-in;
+}
+
+#growinc-button:hover:before {
+  right: 0;
+}
