@@ -8,6 +8,16 @@ html {
   scroll-snap-type: y proximity;
 }
 
+@supports (-moz-appearance: none) {
+  /*
+    Disable in FF due to https://bugzilla.mozilla.org/show_bug.cgi?id=1744289
+    using @supports https://stackoverflow.com/a/32455002
+  */
+  html {
+    scroll-snap-type: none;
+  }
+}
+
 body {
   font-family: 'Encode Sans', sans-serif;
   font-family: 'NTR', sans-serif;
