@@ -101,7 +101,10 @@
   pointer-events: none;
   user-select: none;
   display: flex;
+  justify-content: center;
   align-items: flex-end;
+  margin-right: 5vw;
+  margin-bottom: 30vh;
   z-index: 2;
 }
 
@@ -134,9 +137,16 @@
   color: #ffffff;
 }
 
+#growinc-game-info-container {
+  background-image: url('../Images/Growinc_Para.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 3vw;
+}
+
 #growinc-game-info-details {
   padding: 15px 25px;
-  backdrop-filter: blur(3px);
   font-family: Minecraft;
   z-index: 2;
 }

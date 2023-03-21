@@ -1,4 +1,4 @@
-var iframe = document.querySelectorAll('iframe');
+var iframes = document.querySelectorAll('iframe');
 
 // lunarnauts
 var lunarnautsModal = document.getElementById('lunarnauts-trailer-modal');
@@ -13,8 +13,8 @@ lunarnautsWatchTrailer.onclick = function () {
 
 lunarnautsCloseButton.onclick = function () {
   lunarnautsModal.style.display = 'none';
-  $('iframe').each(function () {
-    this.contentWindow.postMessage(
+  iframes.forEach((iframe) => {
+    iframe.contentWindow.postMessage(
       '{"event":"command","func":"stopVideo","args":""}',
       '*'
     );
@@ -34,8 +34,8 @@ afterlifeWatchTrailer.onclick = function () {
 
 afterlifeCloseButton.onclick = function () {
   afterlifeModal.style.display = 'none';
-  $('iframe').each(function () {
-    this.contentWindow.postMessage(
+  iframes.forEach((iframe) => {
+    iframe.contentWindow.postMessage(
       '{"event":"command","func":"stopVideo","args":""}',
       '*'
     );
@@ -55,8 +55,29 @@ timelesstaleWatchTrailer.onclick = function () {
 
 timelesstaleCloseButton.onclick = function () {
   timelesstaleModal.style.display = 'none';
-  $('iframe').each(function () {
-    this.contentWindow.postMessage(
+  iframes.forEach((iframe) => {
+    iframe.contentWindow.postMessage(
+      '{"event":"command","func":"stopVideo","args":""}',
+      '*'
+    );
+  });
+};
+
+//Grow Inc
+var growIncModal = document.getElementById('growinc-trailer-modal');
+var growIncWatchTrailer = document.getElementById('growinc-cta');
+var growIncCloseButton = document.getElementsByClassName(
+  'trailer-modal-close'
+)[3];
+
+growIncWatchTrailer.onclick = function () {
+  growIncModal.style.display = 'block';
+};
+
+growIncCloseButton.onclick = function () {
+  growIncModal.style.display = 'none';
+  iframes.forEach((iframe) => {
+    iframe.contentWindow.postMessage(
       '{"event":"command","func":"stopVideo","args":""}',
       '*'
     );
@@ -65,13 +86,19 @@ timelesstaleCloseButton.onclick = function () {
 
 // global
 window.onclick = function (event) {
-  if (event.target == afterlifeModal || event.target == lunarnautsModal || event.target == timelesstaleModal) {
+  if (
+    event.target == afterlifeModal ||
+    event.target == lunarnautsModal ||
+    event.target == timelesstaleModal ||
+    event.target == growIncModal
+  ) {
     afterlifeModal.style.display = 'none';
     lunarnautsModal.style.display = 'none';
     timelesstaleModal.style.display = 'none';
+    growIncModal.style.display = 'none';
 
-    $('iframe').each(function () {
-      this.contentWindow.postMessage(
+    iframes.forEach((iframe) => {
+      iframe.contentWindow.postMessage(
         '{"event":"command","func":"stopVideo","args":""}',
         '*'
       );
