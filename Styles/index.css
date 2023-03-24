@@ -559,11 +559,8 @@
 
 /* Narrative Design */
 #narrative-design {
-  background: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   padding: 100px;
   padding-bottom: 125px;
 }
@@ -572,3 +569,22 @@
   margin-bottom: 90px;
 }
 
+.narrative-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5vh 0;
+}
+
+.narrative-container > .left-container {
+  display: flex;
+  align-items: center;
+}
+
+.narrative-container > .right-container {
+  width: 25vw;
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

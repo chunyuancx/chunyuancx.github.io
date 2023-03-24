@@ -220,7 +220,6 @@ footer {
 
 footer > img {
   width: 50px;
-  transform: scalex(-1);
   margin: 10px;
 }
 
