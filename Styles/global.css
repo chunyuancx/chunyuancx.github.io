@@ -229,6 +229,11 @@ footer > a {
   border-bottom: 2px solid white;
 }
 
+footer > a:hover {
+  color: #0fa;
+  border-color: #0fa;
+}
+
 footer > a:link,
 footer > a:visited,
 footer > a:active {
