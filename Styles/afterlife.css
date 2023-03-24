@@ -2,6 +2,12 @@
 #afterlife {
   background-image: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
   cursor: crosshair;
+  transition: background-size 2s ease-in-out;
+  background-size: 100%;
+}
+
+#afterlife:hover {
+  background-size: 110%;
 }
 
 #afterlife-mascot-container {

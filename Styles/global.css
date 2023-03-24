@@ -205,6 +205,36 @@ nav > #left-nav-bar > a:hover {
   }
 }
 
+/* footer */
+
+footer {
+  height: 13vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0c0c;
+  color: white;
+  font-size: 18px;
+}
+
+footer > img {
+  width: 50px;
+  transform: scalex(-1);
+  margin: 10px;
+}
+
+footer > a {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+footer > a:link,
+footer > a:visited,
+footer > a:active {
+  text-decoration: none;
+}
+
 /* back to top button */
 
 #back-to-top-button {
