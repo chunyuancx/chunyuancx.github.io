@@ -2,11 +2,11 @@
 ## 📝 Branson Ang Portfolio
 ![Grow Inc Plant](/Images/Mascots/Growinc_Plant.png)
 
->**Web Link:** <https:// xx>
+>**Web Link:** https:// xx
 >
->**Game Developer:** <Branson Ang>
+>**Game Developer:** https://www.linkedin.com/in/branson-ang-91852b159/
 > 
->**Web Developer:** <https://github.com/chunyuancx>
+>**Web Developer:** https://www.linkedin.com/in/cheng-chun-yuan-029238226/
 
 
 ## 🖥️ Built With
@@ -19,6 +19,6 @@ Simple and clean to show understanding of the basics.
 - ![Adobe Photoshop Badge](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?logo=adobephotoshop&logoColor=fff&style=flat-square)
 - ![Adobe Premiere Pro Badge](https://img.shields.io/badge/Adobe%20Premiere%20Pro-99F?logo=adobepremierepro&logoColor=fff&style=flat-square)
 ## 📷 Screenshots
-
+add lighthouse here
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
