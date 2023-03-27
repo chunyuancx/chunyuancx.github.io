@@ -660,3 +660,39 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.narrative-container > .right-container > button {
+  width: 50%;
+  height: 45px;
+  color: black;
+  border: 5px solid black;
+  box-shadow: 5px 5px black;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  background: #0fa;
+  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
+}
+
+.narrative-container > .right-container > button:hover {
+  margin-right: -2px;
+  margin-bottom: -2px;
+  box-shadow: 3px 3px black;
+}
+
+.narrative-container > .right-container > button:before {
+  content: '';
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -5;
+  transition: right 0.2s ease-in;
+}
+.narrative-container > .right-container > button:hover:before {
+  right: 0;
+}
