@@ -1,18 +1,18 @@
 var iframes = document.querySelectorAll('iframe');
 
-// lunarnauts
-var lunarnautsModal = document.getElementById('lunarnauts-trailer-modal');
-var lunarnautsWatchTrailer = document.getElementById('lunarnauts-cta');
-var lunarnautsCloseButton = document.getElementsByClassName(
+//timelesstale
+var timelesstaleModal = document.getElementById('timelesstale-trailer-modal');
+var timelesstaleWatchTrailer = document.getElementById('timelesstale-cta');
+var timelesstaleCloseButton = document.getElementsByClassName(
   'trailer-modal-close'
 )[0];
 
-lunarnautsWatchTrailer.onclick = function () {
-  lunarnautsModal.style.display = 'block';
+timelesstaleWatchTrailer.onclick = function () {
+  timelesstaleModal.style.display = 'block';
 };
 
-lunarnautsCloseButton.onclick = function () {
-  lunarnautsModal.style.display = 'none';
+timelesstaleCloseButton.onclick = function () {
+  timelesstaleModal.style.display = 'none';
   iframes.forEach((iframe) => {
     iframe.contentWindow.postMessage(
       '{"event":"command","func":"stopVideo","args":""}',
@@ -42,19 +42,19 @@ afterlifeCloseButton.onclick = function () {
   });
 };
 
-//timelesstale
-var timelesstaleModal = document.getElementById('timelesstale-trailer-modal');
-var timelesstaleWatchTrailer = document.getElementById('timelesstale-cta');
-var timelesstaleCloseButton = document.getElementsByClassName(
+// lunarnauts
+var lunarnautsModal = document.getElementById('lunarnauts-trailer-modal');
+var lunarnautsWatchTrailer = document.getElementById('lunarnauts-cta');
+var lunarnautsCloseButton = document.getElementsByClassName(
   'trailer-modal-close'
 )[2];
 
-timelesstaleWatchTrailer.onclick = function () {
-  timelesstaleModal.style.display = 'block';
+lunarnautsWatchTrailer.onclick = function () {
+  lunarnautsModal.style.display = 'block';
 };
 
-timelesstaleCloseButton.onclick = function () {
-  timelesstaleModal.style.display = 'none';
+lunarnautsCloseButton.onclick = function () {
+  lunarnautsModal.style.display = 'none';
   iframes.forEach((iframe) => {
     iframe.contentWindow.postMessage(
       '{"event":"command","func":"stopVideo","args":""}',

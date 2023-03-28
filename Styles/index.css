@@ -661,6 +661,35 @@
   justify-content: center;
 }
 
+.narrative-container > .right-container > h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0.4em 0;
+}
+
+.narrative-container > .right-container > h3 {
+  margin-top: 0;
+  line-height: 20px;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.tags-container > span {
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: 5px;
+  border-radius: 12px;
+  padding: 0 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.narrative-container > .right-container > p {
+  margin: 0.5em 0;
+}
+
 .narrative-container > .right-container > button {
   width: 50%;
   height: 45px;
