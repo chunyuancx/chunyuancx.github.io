@@ -258,6 +258,12 @@ footer > a:active {
   z-index: 9997;
 }
 
+@media (max-width: 1020px) {
+  #back-to-top-button {
+    display: none;
+  }
+}
+
 #back-to-top-button::after {
   content: '\f077';
   font-family: FontAwesome;
