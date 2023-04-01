@@ -1,7 +1,6 @@
 document.addEventListener('mousemove', function (e) {
   const pfpCroppedImage = document.querySelector('#pfp-cropped-image');
   const pfpCroppedShadow = document.querySelector('#pfp-cropped-shadow');
-  const introBanner = document.querySelector('#introduction-banner');
   const witch = document.querySelector('#witch-idle');
 
   //pfp
@@ -11,11 +10,6 @@ document.addEventListener('mousemove', function (e) {
   let pfpShadowX = (window.innerWidth / 2 - e.clientX) / 20;
   let pfpShadowY = (window.innerHeight / 2 - e.clientY) / 20;
   pfpCroppedShadow.style.transform = `translate(${pfpShadowX}px, ${pfpShadowY}px)`;
-
-  //intro-banner
-  let introBannerX = (window.innerWidth / 2 - e.clientX) / 110;
-  let introBannerY = (window.innerHeight / 2 - e.clientY) / 100;
-  introBanner.style.transform = `translate(${introBannerX}px, ${introBannerY}px)`;
 
   //Witch
   let witchX = (window.innerWidth / 2 - e.clientX) / -4;
