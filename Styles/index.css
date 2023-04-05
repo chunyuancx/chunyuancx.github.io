@@ -440,6 +440,20 @@
   height: 100%;
   width: 100%;
   border: 0;
+  animation-name: scale-in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .trailer-modal-close {
