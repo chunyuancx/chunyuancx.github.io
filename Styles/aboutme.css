@@ -1,0 +1,35 @@
+#about-me-container {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #000000 0%, #1a1a1a 107.11%);
+}
+
+#about-me-container > #about-me-pfp > img {
+  margin: 25vh;
+  margin-bottom: 0;
+}
+
+#about-me-container > #about-me-pfp > p {
+  color: white;
+  text-align: center;
+}
+
+#about-me-container > #about-me-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin-top: 12vh;
+  margin-right: 15vw;
+  margin-bottom: 8vh;
+}
+
+#about-me-container > #about-me-introduction > h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#about-me-container > #about-me-introduction > p {
+  font-size: 20px;
+  line-height: 24px;
+}
