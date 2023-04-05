@@ -377,7 +377,8 @@
   object-fit: cover;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.8);
+  filter: brightness(90%);
 }
 
 .watch-cta-buttons {
