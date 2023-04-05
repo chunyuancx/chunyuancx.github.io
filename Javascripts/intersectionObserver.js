@@ -95,3 +95,72 @@ document.querySelectorAll(illustrations).forEach((i) => {
     illustrationsObserver.observe(i);
   }
 });
+
+//narrative design
+const narrativeOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: '-100px',
+};
+
+const KindredAdventure = document.querySelector(
+  'img[alt="Kindred Adventure Book"]'
+);
+const observer5 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('appear1');
+    observer5.unobserve(entry.target);
+  });
+}, narrativeOptions);
+observer5.observe(KindredAdventure);
+
+const KindredCadet = document.querySelector('img[alt="Kindred Cadet Book"]');
+const observer6 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('appear2');
+    observer6.unobserve(entry.target);
+  });
+}, narrativeOptions);
+observer6.observe(KindredCadet);
+
+const KindredRule = document.querySelector('img[alt="Kindred Rule Book"]');
+const observer7 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('appear3');
+    observer7.unobserve(entry.target);
+  });
+}, narrativeOptions);
+observer7.observe(KindredRule);
+
+const KindredUnit = document.querySelector('img[alt="Kindred Unit Catalogue"]');
+const observer8 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('appear4');
+    observer8.unobserve(entry.target);
+  });
+}, narrativeOptions);
+observer8.observe(KindredUnit);
+
+const JotunEmpire = document.querySelector('img[alt="The-Jotun-Empire"]');
+const observer9 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('appear1');
+    observer9.unobserve(entry.target);
+  });
+}, narrativeOptions);
+observer9.observe(JotunEmpire);

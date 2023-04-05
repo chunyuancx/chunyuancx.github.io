@@ -677,6 +677,12 @@
   padding: 0 50px;
   border: 3px solid black;
   box-shadow: 30px 30px black;
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.narrative-container > .right-container:hover {
+  transform: scale(1.05);
 }
 
 .narrative-container > .right-container > h2 {
@@ -724,13 +730,6 @@
   z-index: 10;
   cursor: pointer;
   background: #0fa;
-  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
-}
-
-.narrative-container > .right-container > button:hover {
-  margin-right: -2px;
-  margin-bottom: -2px;
-  box-shadow: 3px 3px black;
 }
 
 .narrative-container > .right-container > button:before {
@@ -752,6 +751,7 @@
   margin-left: -264px;
   transition: transform 0.2s ease-in-out;
   z-index: 1;
+  opacity: 0;
 }
 
 #kindred-covers-container > img:hover {
@@ -762,9 +762,38 @@
 #joutun-cover-container > img {
   transition: transform 0.2s ease-in-out;
   z-index: 1;
+  opacity: 0;
 }
 
 #joutun-cover-container > img:hover {
   transform: translateY(-2em) scale(1.1);
   z-index: 2;
+}
+
+.appear1 {
+  animation: appear 0.45s ease-out both;
+}
+
+.appear2 {
+  animation: appear 0.45s ease-out both;
+  animation-delay: 0.4s;
+}
+
+.appear3 {
+  animation: appear 0.45s ease-out both;
+  animation-delay: 0.8s;
+}
+
+.appear4 {
+  animation: appear 0.45s ease-out both;
+  animation-delay: 1.2s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
