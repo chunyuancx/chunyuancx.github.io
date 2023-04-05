@@ -500,7 +500,7 @@
 
 /* Illustrations */
 #illustrations {
-  background: rgb(21, 22, 26);
+  background: rgb(17, 17, 20);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -646,6 +646,7 @@
   flex-direction: row;
   justify-content: center;
   margin: 5vh 0;
+  margin-left: 20vw;
 }
 
 .narrative-container > .left-container {
