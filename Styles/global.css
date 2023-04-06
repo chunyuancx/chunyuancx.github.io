@@ -4,8 +4,6 @@ html {
   scroll-padding-top: 200px;
   scroll-padding: 50px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
 }
 
 @supports (-moz-appearance: none) {

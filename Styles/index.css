@@ -344,8 +344,7 @@
   justify-content: space-evenly;
   background-size: cover;
   background-position: center center;
-  height: 95vh;
-  scroll-snap-align: start;
+  height: 100vh;
 }
 
 .game-center-cta {
@@ -378,7 +377,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.8);
-  filter: brightness(90%);
+  filter: brightness(100%);
 }
 
 .watch-cta-buttons {
