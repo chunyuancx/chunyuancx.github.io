@@ -220,9 +220,7 @@
 
     <!-- Timelesstale Modal -->
     <div id="timelesstale-trailer-modal" class="trailer-modal">
-      <span id="timelesstale-trailer-modal-close" class="trailer-modal-close"
-        >&times;</span
-      >
+      <span class="trailer-modal-close">&times;</span>
       <div class="trailer-modal-content">
         <iframe
           id="timelesstale-ytplayer"
@@ -300,9 +298,7 @@
 
     <!-- Afterlife Modal -->
     <div id="afterlife-trailer-modal" class="trailer-modal">
-      <span id="afterlife-trailer-modal-close" class="trailer-modal-close"
-        >&times;</span
-      >
+      <span i class="trailer-modal-close">&times;</span>
       <div class="trailer-modal-content">
         <iframe
           id="afterlife-ytplayer"
@@ -370,9 +366,7 @@
 
     <!-- Lunarnauts Modal -->
     <div id="lunarnauts-trailer-modal" class="trailer-modal">
-      <span id="lunarnauts-trailer-modal-close" class="trailer-modal-close"
-        >&times;</span
-      >
+      <span class="trailer-modal-close">&times;</span>
       <div class="trailer-modal-content">
         <iframe
           id="lunarnauts-ytplayer"
@@ -431,9 +425,7 @@
 
     <!-- Grow Inc Modal -->
     <div id="growinc-trailer-modal" class="trailer-modal">
-      <span id="growinc-trailer-modal-close" class="trailer-modal-close"
-        >&times;</span
-      >
+      <span class="trailer-modal-close">&times;</span>
       <div class="trailer-modal-content">
         <iframe
           id="growinc-ytplayer"
@@ -582,9 +574,50 @@
             takes place at a massive space station academy in the universe where
             players learn how to wage interstellar warfare.
           </p>
-          <button>Explore</button>
+          <button id="kindred-explore">Explore</button>
         </div>
       </div>
+
+      <!-- Kindred Modal -->
+      <div id="kindred-modal" class="explore-modal">
+        <span id="kindred-modal-close" class="explore-modal-close"
+          >&times;</span
+        >
+        <div class="explore-modal-content">
+          <div>
+            <a href="">
+              <img
+                width="350"
+                src="Images/Narrative/KindredUnitcatalogue.webp"
+                alt="Kindred Unit Catalogue"
+              />
+            </a>
+            <a href="">
+              <img
+                width="350"
+                src="Images/Narrative/KindredRulebook.webp"
+                alt="Kindred Rule Book"
+              />
+            </a>
+            <a href="">
+              <img
+                width="350"
+                src="Images/Narrative/KindredCadetbooket.webp"
+                alt="Kindred Cadet Book"
+              />
+            </a>
+            <a href="">
+              <img
+                width="350"
+                src="Images/Narrative/KindredAdventurebook.webp"
+                alt="Kindred Adventure Book"
+              />
+            </a>
+          </div>
+          <span style="color: white">Select Book to Read</span>
+        </div>
+      </div>
+
       <!-- Jotun Empire -->
       <div class="narrative-container">
         <div class="left-container" id="joutun-cover-container">
@@ -605,7 +638,24 @@
             is a collection of short stories detailing the journey and struggles
             of a fictional Human Empire after they departed Earth.
           </p>
-          <button>Explore</button>
+          <button id="jotun-explore">Explore</button>
+        </div>
+      </div>
+
+      <!-- Jotun Modal -->
+      <div id="jotun-modal" class="explore-modal">
+        <span class="explore-modal-close">&times;</span>
+        <div class="explore-modal-content">
+          <div>
+            <a href="">
+              <img
+                width="350"
+                src="Images/Narrative/JotunCover.webp"
+                alt="The-Jotun-Empire"
+              />
+            </a>
+          </div>
+          <span style="color: white">Select Book to Read</span>
         </div>
       </div>
     </div>
@@ -631,4 +681,5 @@
 <script src="Javascripts/trailerModal.js"></script>
 <script src="Javascripts/growIncRain.js"></script>
 <script src="Javascripts/illustrationCarousel.js"></script>
+<script src="Javascripts/narrativeModal.js"></script>
 <script src="Javascripts/backToTop.js"></script>
