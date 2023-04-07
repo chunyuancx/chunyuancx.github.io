@@ -2,7 +2,7 @@
 
 html {
   scroll-padding: 50px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @supports (-moz-appearance: none) {
