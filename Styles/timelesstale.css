@@ -33,6 +33,12 @@
   object-fit: cover;
 }
 
+@media (max-width: 1440px) {
+  #timelesstale-cta {
+    margin-top: 20px;
+  }
+}
+
 #timelesstale-cta:hover {
   box-shadow: 16px 16px black, 10px 10px 15px #272727a0, 0 0 15px #272727a0;
 }
@@ -60,32 +66,3 @@
   font-weight: bold;
 }
 
-#timelesstale-button {
-  margin-top: 10px;
-  background-color: #cbb676;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
-}
-
-#timelesstale-button:hover {
-  box-shadow: 8px 7px black;
-}
-
-#timelesstale-button:before {
-  content: '';
-  position: absolute;
-  background: white;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  top: 0;
-  z-index: -5;
-  transition: right 0.2s ease-in;
-}
-
-#timelesstale-button:hover:before {
-  right: 0;
-}

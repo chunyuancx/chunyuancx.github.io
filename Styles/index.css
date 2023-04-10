@@ -168,9 +168,22 @@
   letter-spacing: 4px;
 }
 
+@media (max-width: 1440px) {
+  #introduction-title {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+}
+
 #introduction-name {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 40px;
+}
+
+@media (max-width: 1440px) {
+  #introduction-name {
+    font-size: 32px;
+  }
 }
 
 #introduction-ethos {
@@ -178,11 +191,23 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 1440px) {
+  #introduction-ethos {
+    font-size: 20px;
+  }
+}
+
 #introduction-para {
   font-size: 22px;
   width: 600px;
   line-height: 24px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1440px) {
+  #introduction-para {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -485,6 +510,12 @@
   width: 19vw;
 }
 
+@media (max-width: 1440px) {
+  .game-info-container {
+    width: 22vw;
+  }
+}
+
 .game-info-details {
   display: flex;
   flex-direction: column;
@@ -500,6 +531,13 @@
   font-size: 22px;
   line-height: 200%;
   color: white;
+}
+
+@media (max-width: 1440px) {
+  .game-para {
+    font-size: 20px;
+    line-height: 170%;
+  }
 }
 
 .game-button {

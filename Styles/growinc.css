@@ -155,38 +155,3 @@
   color: #97a1cf;
   margin-bottom: 20px;
 }
-
-#growinc-button {
-  margin-top: 10px;
-  font-size: 16px;
-  background-color: #97a1cf;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
-  transition: box-shadow 0.5s, margin-right 0.5s, margin-bottom 0.5s;
-  font-family: Minecraft;
-  border: 5px solid #21242e;
-  color: #21242e;
-}
-
-#growinc-button:hover {
-  box-shadow: 8px 7px black;
-  color: white;
-}
-
-#growinc-button:before {
-  content: '';
-  position: absolute;
-  background: #52545d;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  top: 0;
-  z-index: -5;
-  transition: right 0.2s ease-in;
-}
-
-#growinc-button:hover:before {
-  right: 0;
-}
