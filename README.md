@@ -11,6 +11,7 @@
 
 ## 🖥️ Built With
 Simple and clean to show understanding of the basics.
+Breakpoints, 1550px
 
 - ![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=flat-square)
 - ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat-square)

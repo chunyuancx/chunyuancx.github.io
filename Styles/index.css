@@ -23,10 +23,10 @@
 
 @media (max-width: 1020px) {
   #introduction {
-    height: 100vh;
+    height: 100%;
+    background: linear-gradient(90deg, #000000 0%, #1a1a1a 107.11%);
     flex-direction: column;
-    background: url('../Images/Wallpaper/Afterlife_Wallpaper.png');
-    background-position: center center;
+    padding-bottom: 50px;
   }
 }
 
@@ -106,6 +106,7 @@
   color: #eeeeee;
   backdrop-filter: blur(0);
   height: 420px;
+  justify-content: center;
 }
 
 @media (max-width: 1020px) {
@@ -168,7 +169,7 @@
   letter-spacing: 4px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   #introduction-title {
     font-size: 2.5rem;
     letter-spacing: 3px;
@@ -180,7 +181,7 @@
   font-size: 40px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   #introduction-name {
     font-size: 32px;
   }
@@ -191,7 +192,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   #introduction-ethos {
     font-size: 20px;
   }
@@ -204,7 +205,7 @@
   margin-bottom: 30px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   #introduction-para {
     font-size: 20px;
   }
@@ -510,9 +511,9 @@
   width: 19vw;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   .game-info-container {
-    width: 22vw;
+    width: 23vw;
   }
 }
 
@@ -533,7 +534,7 @@
   color: white;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1550px) {
   .game-para {
     font-size: 20px;
     line-height: 170%;
@@ -572,6 +573,12 @@
   box-shadow: 12px 12px #111111;
 }
 
+@media (max-width: 1550px) {
+  .carousel-container {
+    margin-bottom: 70px;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -579,6 +586,12 @@
 .visible {
   display: block;
   width: 900px;
+}
+
+@media (max-width: 1550px) {
+  .visible {
+    width: 700px;
+  }
 }
 
 .arrow {
@@ -651,6 +664,12 @@
   opacity: 0;
 }
 
+@media (max-width: 1550px) {
+  .illustrations-grid-item {
+    width: 17vw;
+  }
+}
+
 .slide-in-top {
   -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -691,6 +710,12 @@
 
 #narrative-design > h1 {
   margin-bottom: 90px;
+}
+
+@media (max-width: 1550px) {
+  #narrative-design > h1 {
+    margin-bottom: 40px;
+  }
 }
 
 .narrative-container {
@@ -868,6 +893,12 @@
   margin: 1vw;
   box-shadow: 10px 10px black;
   transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 1550px) {
+  .explore-modal-content > div > a > img {
+    width: 300px;
+  }
 }
 
 .explore-modal-content > div > a > img:hover {
