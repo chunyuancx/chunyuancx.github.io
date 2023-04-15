@@ -12,6 +12,12 @@
   align-items: flex-end;
 }
 
+@media (max-width: 1020px) {
+  #timelesstale-mascot-container {
+    display: none;
+  }
+}
+
 #witch-idle {
   background-image: url('../Images/Mascots/Witch_Idle.png');
   background-size: 90%;
@@ -66,4 +72,3 @@
   color: #cbb676;
   font-weight: bold;
 }
-

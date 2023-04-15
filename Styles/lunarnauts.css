@@ -10,6 +10,12 @@
   user-select: none;
 }
 
+@media (max-width: 1020px) {
+  #lunarnauts-mascot-container {
+    display: none;
+  }
+}
+
 #lunarnauts-mascot-x {
   animation: lunarnauts-mascot-x 26s linear infinite alternate;
 }
