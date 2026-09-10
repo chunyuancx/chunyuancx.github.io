@@ -1,47 +1,79 @@
 const root = document.documentElement;
 const themeToggle = document.querySelector('[data-theme-toggle]');
-const modelSlot = document.querySelector('[data-3d-slot]');
-const modelTrigger = document.querySelector('[data-model-trigger]');
-const modelStatus = document.querySelector('[data-model-status]');
-const themeWipe = document.querySelector('.theme-wipe');
-let scrollPosition = 0;
+const profileCard = document.querySelector('.personal-card');
+let cardTargetOffset = 0;
+let cardCurrentOffset = 0;
+let cardRaf = null;
 
-themeToggle?.addEventListener('click', (event) => {
-  event.preventDefault();
-  if (themeWipe?.classList.contains('is-active')) return;
-  const isDim = root.dataset.theme === 'dim';
-  scrollPosition = window.scrollY;
-  if (themeWipe) {
-    themeWipe.dataset.nextTheme = isDim ? '' : 'dim';
-    themeWipe.classList.remove('is-active');
-    requestAnimationFrame(() => themeWipe.classList.add('is-active'));
+const updateProfileCard = () => {
+  if (!profileCard) return;
+  cardCurrentOffset += (cardTargetOffset - cardCurrentOffset) * 0.12;
+  profileCard.style.setProperty('--card-offset', `${cardCurrentOffset}px`);
+
+  if (Math.abs(cardTargetOffset - cardCurrentOffset) > 0.1) {
+    cardRaf = requestAnimationFrame(updateProfileCard);
+  } else {
+    cardRaf = null;
   }
-});
-
-themeWipe?.addEventListener('animationend', () => {
-  const nextTheme = themeWipe.dataset.nextTheme || '';
-  root.dataset.theme = nextTheme;
-  window.scrollTo(0, scrollPosition);
-  const isDim = nextTheme === 'dim';
-  themeToggle.textContent = isDim ? '☾' : '☀';
-  themeToggle.setAttribute('aria-label', isDim ? 'Switch to light mode' : 'Switch to dark mode');
-  themeWipe.classList.remove('is-active');
-});
-
-let modelReady = false;
-const wakeModelSlot = () => {
-  if (modelReady) return;
-  modelReady = true;
-  modelStatus.textContent = '3D slot ready · add your model URL here';
-  modelSlot.classList.add('is-ready');
 };
 
-const observer = new IntersectionObserver(([entry]) => {
-  if (entry.isIntersecting) {
-    wakeModelSlot();
-    observer.disconnect();
+const syncProfileCard = () => {
+  const canFloat = window.matchMedia('(min-width:1101px) and (min-height:581px) and (prefers-reduced-motion:no-preference)').matches;
+  const availableOffset = Math.max(0, (window.innerHeight - (profileCard?.offsetHeight || 0)) / 2 - 24);
+  cardTargetOffset = canFloat ? Math.min(window.scrollY * 0.08, availableOffset, 60) : 0;
+  if (cardRaf === null) {
+    cardRaf = requestAnimationFrame(updateProfileCard);
   }
-}, { rootMargin: '160px' });
+};
 
-if (modelSlot) observer.observe(modelSlot);
-modelTrigger?.addEventListener('click', wakeModelSlot);
+window.addEventListener('scroll', syncProfileCard, { passive: true });
+window.addEventListener('resize', syncProfileCard);
+syncProfileCard();
+
+const applyTheme = (nextTheme) => {
+  root.dataset.theme = nextTheme;
+  const label = nextTheme === 'dim' ? 'Switch to light mode' : 'Switch to dark mode';
+  themeToggle?.setAttribute('aria-label', label);
+  themeToggle?.setAttribute('title', label);
+};
+
+let themeTransitionActive = false;
+themeToggle?.addEventListener('click', async (event) => {
+  event.preventDefault();
+  if (themeTransitionActive) return;
+  const nextTheme = root.dataset.theme === 'dim' ? '' : 'dim';
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if (!document.startViewTransition || reducedMotion) {
+    applyTheme(nextTheme);
+    return;
+  }
+  themeTransitionActive = true;
+  try {
+    const transition = document.startViewTransition(() => applyTheme(nextTheme));
+    await transition.finished;
+  } catch {
+    applyTheme(nextTheme);
+  } finally {
+    themeTransitionActive = false;
+  }
+});
+
+const torchPointer = window.matchMedia('(hover:hover) and (pointer:fine)');
+document.querySelectorAll('.project-card, .feature-card').forEach((card) => {
+  const moveTorch = (event) => {
+    if (!torchPointer.matches || event.pointerType === 'touch') return;
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty('--torch-x', `${event.clientX - bounds.left}px`);
+    card.style.setProperty('--torch-y', `${event.clientY - bounds.top}px`);
+    card.classList.add('is-lit');
+  };
+  const clearTorch = () => {
+    card.classList.remove('is-lit');
+    card.style.removeProperty('--torch-x');
+    card.style.removeProperty('--torch-y');
+  };
+  card.addEventListener('pointerenter', moveTorch);
+  card.addEventListener('pointermove', moveTorch);
+  card.addEventListener('pointerleave', clearTorch);
+  card.addEventListener('pointercancel', clearTorch);
+});

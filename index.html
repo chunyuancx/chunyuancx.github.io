@@ -7,21 +7,36 @@
     <title>Cheng Chun Yuan — Full-Stack Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=32" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=42" />
   </head>
   <body>
-    <div class="theme-wipe" aria-hidden="true"></div>
     <aside class="personal-card" aria-label="Personal details">
-      <span class="personal-card-label">Profile</span>
-      <h2>Cheng Chun Yuan</h2>
-      <p>Software Engineering student and web developer based in Singapore.</p>
-      <dl>
-        <div><dt>Study</dt><dd>SIT · 2024—28</dd></div>
-        <div><dt>Focus</dt><dd>Web systems &amp; design</dd></div>
-        <div><dt>Outside work</dt><dd>Cars, motorcycles, video</dd></div>
-      </dl>
-      <a href="mailto:hello@example.com">Get in touch <span>↗</span></a>
+      <div class="profile-portrait" role="img" aria-label="Abstract cyan holographic portrait">
+        <svg class="hologram" viewBox="0 0 400 460" aria-hidden="true">
+          <defs>
+            <linearGradient id="holo-light" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#3ca3cd"/><stop offset=".45" stop-color="#c5f5f4"/><stop offset=".8" stop-color="#f3ffff"/><stop offset="1" stop-color="#78d0e2"/></linearGradient>
+            <filter id="holo-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="blur"/><feFlood flood-color="#009dff"/><feComposite in2="blur" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g class="hologram-figure" fill="url(#holo-light)" filter="url(#holo-glow)">
+            <path d="M132 116 141 87 166 52Q221 48 252 66L280 91Q302 114 291 137L285 151 294 164 251 160 207 146 169 133Z"/>
+            <path d="m126 135 70 12 87 29-39-3-76-21-52-8Z M154 164l102 25 37 17-60-12Z"/>
+            <path d="m151 270 10-15-16-8-19 24-27-5-9 14-51 19-17 32 14 30-17 11-12 88h177l-57-43-30-41-21-19 36 10-22-24 37 12-12-28 35 3-7-29Z"/>
+            <path d="m239 248-16 29 11 28-12 15 14 35 19 22-13 16 10 23-18 28-28 16h194l-3-111-18-29-39-20-60-15-18-27Z"/>
+            <path d="m42 376 79 52 73 24 25-4-81-34-37-9Z M213 255l61 8-36-12Z"/>
+          </g>
+          <g class="hologram-shards" fill="#b1d9d7" opacity=".32"><path d="M164 52h42v40h-42zM124 92h40v40h-40zM247 133h42v38h-42zM42 297h41v40H42zM83 337h41v40H83zM246 278h41v40h-41zM287 377h41v41h-41z"/></g>
+        </svg>
+        <div class="portrait-grid" aria-hidden="true"></div>
+      </div>
+      <div class="profile-connect">
+        <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H9l-5 4V4Z"/><path d="M8 10h1m3 0h1m3 0h1"/></svg> LET'S CONNECT:</p>
+        <nav class="profile-links" aria-label="Profile contact links">
+          <a href="mailto:hello@example.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</a>
+          <a href="https://linkedin.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg>LinkedIn</a>
+          <a href="https://github.com/chunyuancx"><svg viewBox="0 0 24 24" aria-hidden="true" class="github-icon"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+        </nav>
+      </div>
     </aside>
     <div class="page-shell">
       <header class="site-header">
@@ -29,7 +44,7 @@
           <a href="#work">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme" data-theme-toggle>☀</button>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme" data-theme-toggle><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg></button>
         </nav>
       </header>
 
@@ -37,37 +52,53 @@
         <section class="hero section-grid" aria-labelledby="intro-title">
           <div class="hero-copy">
             <div class="profile-row">
-              <div class="avatar" aria-hidden="true">
-                <span>CCY</span>
+              <div class="avatar">
+                <img src="ID_card.jpg" alt="Cheng Chun Yuan" width="959" height="1280" fetchpriority="high" />
               </div>
               <div>
-                <h1 class="name">Cheng Chun Yuan <span class="verified" aria-label="Verified">✓</span></h1>
+                <h1 class="name">Cheng Chun Yuan <span class="verified" role="img" aria-label="Verified"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1d9bf0" d="m12 1 3.1 2.1 3.7.2 1.3 3.5L23 9.2 22 12l1 2.8-2.9 2.4-1.3 3.5-3.7.2L12 23l-3.1-2.1-3.7-.2-1.3-3.5L1 14.8 2 12 1 9.2l2.9-2.4 1.3-3.5 3.7-.2Z"/><path d="m7.5 12 3 3 6-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></h1>
                 <div class="socials" aria-label="Social links">
-                  <a href="https://github.com" aria-label="GitHub">GH</a>
-                  <a href="https://linkedin.com" aria-label="LinkedIn">in</a>
-                  <a href="mailto:hello@example.com" aria-label="Email">@</a>
+                  <a href="https://github.com/chunyuancx" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" class="github-icon"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.39.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+                  <a href="https://linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg></a>
+                  <a href="mailto:hello@example.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
                 </div>
               </div>
             </div>
-            <h2 id="intro-title">Software Engineering Student &amp; Web Developer</h2>
+            <h2 id="intro-title">Software Engineering Student <span>&amp; Web Developer</span></h2>
             <p class="lede">I am an adaptable and creative Software Engineering student with a strong interest in web design, new technologies, and ideas that make digital experiences more useful.</p>
             <div class="hero-actions">
-              <a class="button button-dark" href="Resume.docx" download>View résumé <span>↗</span></a>
+              <a class="button button-dark" href="Resume.docx" download>View Resume <span aria-hidden="true">&#8250;</span></a>
               <a class="text-link" href="#work">See selected work <span>↓</span></a>
             </div>
           </div>
         </section>
 
-        <section class="featured-video" aria-labelledby="video-title">
-          <div class="section-heading"><h2 id="video-title">Featured video</h2><span>Creative work · 2025</span></div>
-          <div class="video-frame">
-            <video controls preload="metadata" poster="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
-              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
-            <div class="video-overlay"><span class="video-kicker">Cheng Chun Yuan</span><strong>Small details,<br /><em>big feeling.</em></strong><span class="video-play">▶</span></div>
-          </div>
-          <p class="video-caption">Outside software engineering, I explore video editing and automotive content featuring cars and motorcycles.</p>
+        <section class="featured-build" aria-labelledby="featured-title">
+          <article class="feature-card">
+            <div class="feature-art" role="img" aria-label="Dark KeepR desktop vault interface mockup">
+              <div class="vault-window" aria-hidden="true">
+                <div class="vault-titlebar"><span>keepR</span><span>&minus; &square; &times;</span></div>
+                <div class="vault-screen">
+                  <strong class="vault-logo">R</strong>
+                  <span class="vault-welcome">Your own private space.</span>
+                  <span class="vault-hint">Everything you need. Only for you.</span>
+                  <div class="vault-field">Master password <span>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
+                  <div class="vault-unlock">Unlock vault</div>
+                  <span class="vault-footnote">LOCAL FIRST. ALWAYS PRIVATE.</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-content">
+              <span class="project-type">Featured build</span>
+              <h2 id="featured-title">KeepR: a private vault I built.</h2>
+              <p>Local-first password vault and personal workflow desktop app.</p>
+              <ul class="feature-stack" aria-label="Built with"><li>Tauri</li><li>Rust</li><li>React</li><li>SQLite</li></ul>
+              <details class="feature-case-study">
+                <summary>Read case study <span aria-hidden="true">&#8599;</span></summary>
+                <p>The full KeepR case study is coming soon.</p>
+              </details>
+            </div>
+          </article>
         </section>
 
         <section class="content-section" id="experience" aria-labelledby="experience-title">
@@ -102,20 +133,34 @@
           </div>
         </section>
 
-        <section class="model-section" data-3d-slot aria-label="Optional 3D showcase">
-          <div><span class="eyebrow">A place for the future</span><h2>Made to hold<br /><em>more dimension.</em></h2></div>
-          <p>When a project needs it, this space can wake up a compressed 3D model on demand. The rest of the portfolio stays lightweight.</p>
-          <button class="button button-outline" type="button" data-model-trigger>Preview 3D space <span>↗</span></button>
-          <div class="model-status" data-model-status aria-live="polite"></div>
-        </section>
-
         <section class="contact-section" id="contact" aria-labelledby="contact-title">
-          <p class="eyebrow">Have a good one in mind?</p><h2 id="contact-title">Let's make it<br /><em>feel inevitable.</em></h2><a class="email-link" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
+          <h2 id="contact-title">Let's work together.</h2>
+          <div class="contact-layout">
+            <p class="contact-intro">Have a website or web app in mind? Let's talk about thoughtful design, useful features, and bringing your ideas to life. I'm open to project collaborations and opportunities to build and learn.</p>
+            <div class="contact-cards">
+              <a class="contact-card" href="mailto:hello@example.com">
+                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+                <span class="contact-copy"><strong>Email</strong><span>hello@example.com</span></span>
+                <span class="contact-arrow" aria-hidden="true">&#8250;</span>
+              </a>
+              <a class="contact-card" href="mailto:hello@example.com?subject=Let%27s%20schedule%20a%20call">
+                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4m8-4v4M4 10h16m-12 4h2m4 0h2m-8 3h2"/></svg></span>
+                <span class="contact-copy"><strong>Let's talk</strong><span>Schedule a Call</span></span>
+                <span class="contact-arrow" aria-hidden="true">&#8250;</span>
+              </a>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer class="site-footer"><span>© 2025 Cheng Chun Yuan</span><span>Built with care · Singapore</span><a href="#top">Back to top ↑</a></footer>
+      <footer class="site-footer">
+        <div class="footer-copy">
+          <p class="footer-motto">Repetition until it becomes technique.</p>
+          <div class="footer-details"><span>Cheng Chun Yuan</span><span>Still sharpening</span><span>Singapore</span></div>
+        </div>
+        <a class="footer-return" href="#top"><img src="ID_card.jpg" alt="" width="36" height="36" loading="lazy" /><span>Back to top <span aria-hidden="true">&#8593;</span></span></a>
+      </footer>
     </div>
-    <script src="script.js?v=13" defer></script>
+    <script src="script.js?v=19" defer></script>
   </body>
 </html>
