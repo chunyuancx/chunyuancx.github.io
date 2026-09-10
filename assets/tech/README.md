@@ -1,1 +1,1 @@
-Technology brand icons are from Devicon v2.16.0 (MIT; see LICENSE-devicon.txt). Brand trademarks belong to their respective owners. NoSQL and VMware use locally drawn database and virtualization symbols.
+Technology brand icons are from Devicon v2.16.0 (MIT; see LICENSE-devicon.txt). Brand trademarks belong to their respective owners. NoSQL, VMware, and WebGL use locally drawn database, virtualization, and 3D graphics symbols.
