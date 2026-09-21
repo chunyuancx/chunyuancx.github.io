@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=58" />
+    <link rel="stylesheet" href="styles.css?v=65" />
   </head>
   <body>
     <aside class="personal-card" aria-label="Personal details">
@@ -62,29 +62,16 @@
         </section>
 
         <section class="featured-build" aria-labelledby="featured-title">
-          <article class="feature-card">
-            <div class="feature-art" role="img" aria-label="Dark KeepR desktop vault interface mockup">
-              <div class="vault-window" aria-hidden="true">
-                <div class="vault-titlebar"><span>keepR</span><span>&minus; &square; &times;</span></div>
-                <div class="vault-screen">
-                  <strong class="vault-logo">R</strong>
-                  <span class="vault-welcome">Your own private space.</span>
-                  <span class="vault-hint">Everything you need. Only for you.</span>
-                  <div class="vault-field">Master password <span>&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
-                  <div class="vault-unlock">Unlock vault</div>
-                  <span class="vault-footnote">LOCAL FIRST. ALWAYS PRIVATE.</span>
-                </div>
-              </div>
-            </div>
+          <article class="feature-card feature-card-gt3">
+            <a class="feature-art feature-gt3" href="https://chunyuancx.github.io/porsche-gt3/" target="_blank" rel="noopener noreferrer" aria-label="Explore the Porsche 911 GT3 site (opens in a new tab)">
+              <img src="assets/images/gt3-site.png" alt="Loaded Porsche 911 GT3 website with the car, GT3 title, and Driven by instinct headline" width="1265" height="712" />
+            </a>
             <div class="feature-content">
-              <span class="project-type">Featured build</span>
-              <h2 id="featured-title">KeepR: a private vault I built.</h2>
-              <p>Local-first password vault and personal workflow desktop app.</p>
-              <ul class="feature-stack" aria-label="Built with"><li>Tauri</li><li>Rust</li><li>React</li><li>SQLite</li></ul>
-              <details class="feature-case-study">
-                <summary>Read case study <span aria-hidden="true">&#8599;</span></summary>
-                <p>The full KeepR case study is coming soon.</p>
-              </details>
+              <span class="project-type">Featured site</span>
+              <h2 id="featured-title">Porsche 911 GT3</h2>
+              <p>Blender visuals brought to life through light and scroll.</p>
+              <ul class="feature-stack" aria-label="Built with"><li>Blender</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <a class="button button-dark" href="https://chunyuancx.github.io/porsche-gt3/" target="_blank" rel="noopener noreferrer">View site <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </section>
@@ -179,9 +166,9 @@
         <section class="content-section" id="work" aria-labelledby="work-title">
           <div class="section-heading"><h2 id="work-title">Projects</h2></div>
           <div class="project-grid">
-            <a class="project-card" href="#experience"><div class="project-art art-care"><span>HDB<br />CMS</span><i>↗</i></div><div class="project-meta"><h3>HDB Car Park CMS</h3><span>Web system ↗</span></div><p>Redesigned a web-based CMS for managing car parks with reusable, user-friendly features.</p></a>
-            <a class="project-card" href="#experience"><div class="project-art art-sms"><span>F1<br />IT</span><i>↗</i></div><div class="project-meta"><h3>F1 Event IT Support</h3><span>Infrastructure ↗</span></div><p>Set up routers, phones, and internet connections across media centres, gantries, and stages.</p></a>
-            <div class="project-card project-coming"><div class="coming-mark">IN PROGRESS</div><div class="project-meta"><h3>Software Engineering</h3><span>SIT · 2024—28</span></div><p>Building stronger foundations in software design, systems, and emerging technologies.</p></div>
+            <a class="project-card" href="https://tuas-grp3-aptra.onrender.com/" target="_blank" rel="noopener noreferrer"><div class="project-art project-screenshot"><img src="assets/images/aptra-site.png" alt="APTRA website showing its email input, tone controls, and reply output" width="1265" height="712" loading="lazy" /></div><div class="project-meta"><h3>APTRA</h3><span>AI writing assistant ↗</span></div><p>An email-reply assistant with adjustable tone, reply length, and additional context to help shape each response.</p></a>
+            <a class="project-card" href="https://onyxmidnightclub.myshopify.com/" target="_blank" rel="noopener noreferrer"><div class="project-art project-screenshot"><img src="assets/images/onyx-site.png" alt="Onyx Midnight Club storefront with its dark grid design and navigation" width="1265" height="712" loading="lazy" /></div><div class="project-meta"><h3>Onyx Midnight Club</h3><span>Shopify store ↗</span></div><p>An e-commerce storefront being developed on Shopify.</p><span class="project-status">Ongoing</span><span class="project-access">Password-protected preview</span></a>
+            <article class="project-card"><div class="project-art project-screenshot"><img src="assets/images/hdb-cms.png?v=2" alt="HDB Car Park CMS dashboard showing car park implementation, expiration status, and contract management" width="2004" height="1186" loading="lazy" /></div><div class="project-meta"><h3>HDB Car Park CMS</h3><span>Web system</span></div><p>A content management system designed for HDB’s internal use.</p><span class="project-access">Private system · Screenshot only</span></article>
           </div>
         </section>
 
@@ -207,10 +194,9 @@
 
       <footer class="site-footer">
         <div class="footer-copy">
-          <p class="footer-motto">Repetition until it becomes technique.</p>
-          <div class="footer-details"><span>Cheng Chun Yuan</span><span>Still sharpening</span><span>Singapore</span></div>
+          <div class="footer-details"><span>Cheng Chun Yuan</span><span>Singapore</span></div>
         </div>
-        <a class="footer-return" href="#top"><img src="assets/images/profile.jpg" alt="" width="36" height="36" loading="lazy" /><span>Back to top <span aria-hidden="true">&#8593;</span></span></a>
+        <a class="footer-return" href="#top"><span>Back to top <span aria-hidden="true">&#8593;</span></span></a>
       </footer>
     </div>
     <dialog class="resume-dialog" id="resume-dialog" aria-label="Resume preview">

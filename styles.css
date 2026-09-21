@@ -386,6 +386,16 @@ main {
   isolation:isolate;
   background:repeating-radial-gradient(ellipse at 115% -30%,#090a0b 0 44px,#292c2e 46px,#56595a 47px,#16181a 49px,#08090a 92px);
 }
+.feature-gt3 { background:#08090b; padding:0; min-height:280px; }
+.feature-gt3 img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; }
+.gt3-caption { position:absolute; z-index:4; inset:auto 22px 20px; display:flex; justify-content:space-between; color:#fff; font:500 13px var(--mono); letter-spacing:.18em; }
+.feature-gt3:focus-visible { outline:3px solid var(--ink); outline-offset:4px; }
+.art-aptra { background:#e8edff; color:#333c88; }
+.art-onyx { background:radial-gradient(ellipse at top,#343341,#0b0b0e 75%); color:#f3f1ed; }
+.art-keepr { background:#151918; color:#dfe7e1; }
+.art-aptra small, .art-onyx small, .art-keepr small { display:block; margin-top:12px; font-size:9px; letter-spacing:.08em; }
+.art-aptra i, .art-onyx i { position:absolute; right:18px; top:18px; font-style:normal; }
+.project-access { display:block; margin:0 0 8px; color:var(--muted); font-size:11px; }
 .vault-window {
   width:100%;
   max-width:260px;
@@ -1020,4 +1030,44 @@ html:has(.resume-dialog[open]) { overflow:hidden; }
     transition:none!important;
     animation:none!important;
   }
+}
+
+/* Show complete website captures without cropping their interface. */
+.feature-art.feature-gt3 { min-height:0; aspect-ratio:1265 / 712; align-self:center; }
+.feature-gt3 img { object-fit:contain; }
+.project-art.project-screenshot { height:auto; aspect-ratio:1265 / 712; background:var(--soft); }
+.project-screenshot img { display:block; width:100%; height:100%; object-fit:contain; }
+
+.project-status { display:inline-block; margin:0 0 10px; padding:4px 9px; border:1px solid var(--line); border-radius:20px; background:var(--soft); color:var(--ink); font:500 10px var(--mono); }
+
+/* Give the complete GT3 screenshot most of the featured card. */
+.feature-card-gt3 { grid-template-columns:minmax(0, 1.55fr) minmax(0, 1fr); align-items:center; }
+.feature-card-gt3 .feature-content { padding:18px; }
+.feature-card-gt3 .project-type { font-size:10px; margin-bottom:8px; letter-spacing:.14em; }
+.feature-card-gt3 .feature-content h2 { font-size:22px; line-height:1.25; margin-bottom:8px; }
+.feature-card-gt3 .feature-content p { font-size:14px; line-height:1.55; margin-bottom:10px; }
+.feature-card-gt3 .feature-stack { gap:4px; margin:0 0 12px; }
+.feature-card-gt3 .feature-stack li { font-size:11px; padding:3px 7px; }
+.feature-card-gt3 .button { font-size:13px; padding:11px 15px; min-height:0; }
+@container (max-width:420px) {
+  .feature-card-gt3 { grid-template-columns:1fr; }
+  .feature-card-gt3 .feature-content { padding:18px; }
+}
+
+/* More breathing room between the featured project details. */
+.feature-card-gt3 .feature-content { padding:24px 20px; }
+.feature-card-gt3 .project-type { margin-bottom:14px; }
+.feature-card-gt3 .feature-content h2 { line-height:1.35; margin-bottom:16px; }
+.feature-card-gt3 .feature-content p { line-height:1.8; margin-bottom:18px; }
+.feature-card-gt3 .feature-stack { gap:7px; margin-bottom:22px; }
+
+/* Keep the requested stacked GT3 layout across screen sizes. */
+@media (min-width:0px) {
+  .feature-card-gt3 { grid-template-columns:1fr; }
+  .feature-card-gt3 .feature-art { width:100%; align-self:stretch; }
+  .feature-card-gt3 .feature-content { padding:20px 18px; }
+  .feature-card-gt3 .project-type { margin-bottom:10px; }
+  .feature-card-gt3 .feature-content h2 { margin-bottom:10px; }
+  .feature-card-gt3 .feature-content p { margin-bottom:12px; line-height:1.65; }
+  .feature-card-gt3 .feature-stack { margin-bottom:16px; }
 }
